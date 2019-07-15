@@ -26,7 +26,7 @@ public class SkillDirector2 : MonoBehaviour
     {
         this.skill2 = GameObject.Find("skill2");
 
-        count = 15;
+        count = 5;
         k = 1;
 
         instance = this;
@@ -39,7 +39,7 @@ public class SkillDirector2 : MonoBehaviour
 
 
 
-        this.skill2.GetComponent<Text>().text = "화염폭풍 : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "파이어볼 : " + this.count.ToString("F0");
         
 
     }
@@ -48,55 +48,47 @@ public class SkillDirector2 : MonoBehaviour
     {
         count -= 1;
         
-        this.skill2.GetComponent<Text>().text = "화염폭풍 : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
 
-        
-            
-        
+       
 
-        
-       
-       
     }
 
     public void RButtonDown()
     {
         count -= 1;
         
-        this.skill2.GetComponent<Text>().text = "화염폭풍 : " + this.count.ToString("F0");
-        
+        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
 
        
+
+
     }
 
     public void UButtonDown()
     {
         count -= 1;
 
-        this.skill2.GetComponent<Text>().text = "화염폭풍 : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
+
         
 
-       
+
     }
 
     public void DButtonDown()
     {
         count -= 1;
         
-        this.skill2.GetComponent<Text>().text = "화염폭풍 : " + this.count.ToString("F0");
-       // if (count == 0)
-       // {
-            
-            
-        //    this.skill2.GetComponent<Text>().text = "화염폭풍 : " + this.count.ToString("F0");
-       // }
+        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
 
+       
       
     }
     public void FireReset()
     {
         
-            count = 15;
+            count = 5;
             
 
     }

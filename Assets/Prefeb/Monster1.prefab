@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a6db2a2bfa8d447a185c5928b67cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
+  monsterPrefab: {fileID: 829159537852229082, guid: 7f38a5e9c0cf31f4cb7856b50264241f,
+    type: 3}
   monsterPrefab2: {fileID: 602263774700078865, guid: 6a06b92fdecf30e4ca220e6f1e1b20b6,
     type: 3}
   potionPrefab: {fileID: 5791086982184823969, guid: e9fd379207a2cda439f1f9e0ece2823b,
@@ -119,8 +120,10 @@ MonoBehaviour:
     type: 3}
   weaponPrefab: {fileID: 5869301071844746224, guid: a95135e1b8c1748448c808af6bc26588,
     type: 3}
-  monsterPrefab3: {fileID: 0}
-  monsterPrefab4: {fileID: 0}
+  monsterPrefab3: {fileID: 4611666079402917156, guid: 504384274588c2247a05abfb386e5605,
+    type: 3}
+  monsterPrefab4: {fileID: 8391087356599079672, guid: 2e54b01898cef3a419862f179aa3fbb3,
+    type: 3}
   coinPrefab: {fileID: 536557528887482541, guid: 54747527ca3973a4b80b8f62c1051164,
     type: 3}
   posi: {fileID: 0}

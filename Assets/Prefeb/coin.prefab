@@ -105,9 +105,12 @@ MonoBehaviour:
     type: 3}
   weaponPrefab: {fileID: 5869301071844746224, guid: a95135e1b8c1748448c808af6bc26588,
     type: 3}
-  monsterPrefab3: {fileID: 0}
-  monsterPrefab4: {fileID: 0}
-  coinPrefab: {fileID: 0}
+  monsterPrefab3: {fileID: 4611666079402917156, guid: 504384274588c2247a05abfb386e5605,
+    type: 3}
+  monsterPrefab4: {fileID: 8391087356599079672, guid: 2e54b01898cef3a419862f179aa3fbb3,
+    type: 3}
+  coinPrefab: {fileID: 536557528887482541, guid: 54747527ca3973a4b80b8f62c1051164,
+    type: 3}
   posi: {fileID: 0}
 --- !u!114 &172197476715127467
 MonoBehaviour:

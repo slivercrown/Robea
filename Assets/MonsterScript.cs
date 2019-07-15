@@ -89,6 +89,27 @@ public class MonsterScript : MonoBehaviour
 
             }
 
+            if (this.gameObject.tag == "Monster3")
+            {
+                GameObject hpdirector2 = GameObject.Find("HpDirector");
+                hpdirector2.GetComponent<HpDirector>().DecreaseHp3();
+
+                GameObject scoredirector2 = GameObject.Find("ScoreRecord");
+                scoredirector2.GetComponent<ScoreRecord>().record3();
+
+            }
+
+            if (this.gameObject.tag == "Monster4")
+            {
+                GameObject hpdirector2 = GameObject.Find("HpDirector");
+                hpdirector2.GetComponent<HpDirector>().DecreaseHp4();
+
+                GameObject scoredirector2 = GameObject.Find("ScoreRecord");
+                scoredirector2.GetComponent<ScoreRecord>().record4();
+
+            }
+
+
             if (this.gameObject.tag == "potion")
             {
                 GameObject hpdirector3 = GameObject.Find("HpDirector");

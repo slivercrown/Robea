@@ -49,7 +49,7 @@ public class MonsterGenerator : MonoBehaviour
     {
 
         int num;
-        num = Random.Range(1, 9);
+        num = Random.Range(1, 15);
 
         if (num == 1 || num == 5)
         {
@@ -63,30 +63,59 @@ public class MonsterGenerator : MonoBehaviour
             go2.transform.position = cMove.beforechar;
         }
 
-        if (num == 3)
+        if (num == 3 || num == 9)
         {
             GameObject go3 = Instantiate(potionPrefab) as GameObject;
             go3.transform.position = cMove.beforechar;
         }
 
-        if (num == 4)
+        if (num == 4 || num == 10)
         {
             GameObject go4 = Instantiate(weaponPrefab) as GameObject;
             go4.transform.position = cMove.beforechar;
         }
 
-        if (num == 7)
+        if (num == 7 || num == 11)
         {
             GameObject go5 = Instantiate(potionPrefab2) as GameObject;
             go5.transform.position = cMove.beforechar;
         }
 
-        if (num == 8)
+        if (num == 8 || num == 12)
         {
             GameObject go5 = Instantiate(coinPrefab) as GameObject;
             go5.transform.position = cMove.beforechar;
         }
 
+        if (num == 13)
+        {
+            if (ScoreRecord.instance.result() > 60)
+            {
+            GameObject go = Instantiate(monsterPrefab4) as GameObject;
+            go.transform.position = cMove.beforechar;
+            }
+
+            else
+            {
+                GameObject go = Instantiate(monsterPrefab) as GameObject;
+                go.transform.position = cMove.beforechar;
+            }
+        }
+
+        if (num == 14)
+        {
+            if (ScoreRecord.instance.result() > 30)
+            {
+                GameObject go = Instantiate(monsterPrefab3) as GameObject;
+                go.transform.position = cMove.beforechar;
+            }
+
+            else
+            {
+                GameObject go = Instantiate(monsterPrefab2) as GameObject;
+                go.transform.position = cMove.beforechar;
+            }
+        }
 
     }
     
@@ -517,7 +546,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(-1.9f, 3.75f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(-1.9f, 3.75f, 0);
@@ -534,13 +563,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(-1.9f, 3.75f, 0);
         }
-
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(-1.9f, 3.75f, 0);
-        }
-
+        
         else
         {
             GameObject so6 = Instantiate(coinPrefab) as GameObject;
@@ -559,7 +582,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(0, 3.75f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(0, 3.75f, 0);
@@ -577,11 +600,7 @@ public class MonsterGenerator : MonoBehaviour
             so4.transform.position = new Vector3(0, 3.75f, 0);
         }
 
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(0, 3.75f, 0);
-        }
+        
 
         else
         {
@@ -602,7 +621,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(1.9f, 3.75f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(1.9f, 3.75f, 0);
@@ -619,11 +638,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(1.9f, 3.75f, 0);
         }
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(1.9f, 3.75f, 0);
-        }
+       
 
         else
         {
@@ -644,7 +659,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(-1.9f, 1.2f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(-1.9f, 1.2f, 0);
@@ -661,11 +676,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(-1.9f, 1.2f, 0);
         }
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(-1.9f, 1.2f, 0);
-        }
+       
 
         else
         {
@@ -686,7 +697,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(1.9f, 1.2f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(1.9f, 1.2f, 0);
@@ -703,11 +714,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(1.9f, 1.2f, 0);
         }
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(1.9f, 1.2f, 0);
-        }
+       
 
         else
         {
@@ -728,7 +735,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(-1.9f, -1.35f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(-1.9f, -1.35f, 0);
@@ -745,11 +752,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(-1.9f, -1.35f, 0);
         }
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(-1.9f, -1.35f, 0);
-        }
+       
 
         else
         {
@@ -770,7 +773,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(0.0f, -1.35f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(0.0f, -1.35f, 0);
@@ -787,11 +790,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(0.0f, -1.35f, 0);
         }
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(0.0f, -1.35f, 0);
-        }
+       
 
         else
         {
@@ -812,7 +811,7 @@ public class MonsterGenerator : MonoBehaviour
             so.transform.position = new Vector3(1.9f, -1.35f, 0);
         }
 
-        else if (num2 == 2)
+        else if (num2 == 2 || num2 == 5)
         {
             GameObject so2 = Instantiate(monsterPrefab2) as GameObject;
             so2.transform.position = new Vector3(1.9f, -1.35f, 0);
@@ -829,11 +828,7 @@ public class MonsterGenerator : MonoBehaviour
             GameObject so4 = Instantiate(weaponPrefab) as GameObject;
             so4.transform.position = new Vector3(1.9f, -1.35f, 0);
         }
-        else if (num2 == 5)
-        {
-            GameObject so5 = Instantiate(potionPrefab2) as GameObject;
-            so5.transform.position = new Vector3(1.9f, -1.35f, 0);
-        }
+       
 
         else
         {

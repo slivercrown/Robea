@@ -2,37 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//검정 슬라임
-
-public class MonsterInfo2 : MonoBehaviour
+public class MonsterInfo4 : MonoBehaviour
 {
+
+    //체력 4짜리
+
     GameObject monster;
 
-    public static MonsterInfo2 instance;
+    public static MonsterInfo4 instance;
 
-    public int monsterhp = 1;
-
-    
+    public int monsterhp = 4;
 
     void Start()
     {
         this.monster = GameObject.Find("monster");
 
-        MonsterInfo2.instance = this;
+        MonsterInfo4.instance = this;
     }
 
     public int Monhp()
     {
-        
-            return monsterhp;
-        
-    }
-    
 
+        return monsterhp;
+
+    }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

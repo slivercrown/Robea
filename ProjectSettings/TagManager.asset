@@ -12,6 +12,8 @@ TagManager:
   - weapon
   - potion2
   - coin
+  - Monster4
+  - Monster3
   layers:
   - Default
   - TransparentFX

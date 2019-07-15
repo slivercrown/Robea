@@ -23,17 +23,9 @@ public class MonsterInfo : MonoBehaviour
 
     public int Monhp()
     {
-        if (ScoreRecord.instance.nowscore > 50)
-        {
-            monsterhp =3;
-
+        
             return monsterhp;
-        }
-
-        else
-        {
-            return monsterhp;
-        }
+        
         
     }
 

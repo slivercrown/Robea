@@ -1,24 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-//검정 슬라임
-
-public class MonsterInfo2 : MonoBehaviour
+//벽돌 몬스터 
+public class MonsterInfo3 : MonoBehaviour
 {
     GameObject monster;
 
-    public static MonsterInfo2 instance;
+    public static MonsterInfo3 instance;
 
-    public int monsterhp = 1;
+    public int monsterhp = 3;
 
-    
 
     void Start()
     {
         this.monster = GameObject.Find("monster");
 
-        MonsterInfo2.instance = this;
+        MonsterInfo3.instance = this;
     }
 
     public int Monhp()
@@ -26,13 +23,12 @@ public class MonsterInfo2 : MonoBehaviour
         
             return monsterhp;
         
-    }
-    
 
+    }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

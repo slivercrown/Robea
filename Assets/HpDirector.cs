@@ -113,6 +113,74 @@ public class HpDirector : MonoBehaviour
        
     }
 
+    public void DecreaseHp3()
+    {
+
+        k = this.duration - MonsterInfo3.instance.Monhp();
+
+        if (k >= 0)
+        {
+            duration = k;
+
+        }
+        else
+        {
+            duration = 0;
+            nowhp = k + this.nowhp;
+        }
+
+
+        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+
+        if (nowhp > 10)
+        {
+            nowhp = 10;
+        }
+
+        if (nowhp <= 0)
+        {
+
+            SceneManager.LoadScene("EndScene");
+        }
+
+
+    }
+
+    public void DecreaseHp4()
+    {
+
+        k = this.duration - MonsterInfo4.instance.Monhp();
+
+        if (k >= 0)
+        {
+            duration = k;
+
+        }
+        else
+        {
+            duration = 0;
+            nowhp = k + this.nowhp;
+        }
+
+
+        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+
+        if (nowhp > 10)
+        {
+            nowhp = 10;
+        }
+
+        if (nowhp <= 0)
+        {
+
+            SceneManager.LoadScene("EndScene");
+        }
+
+
+    }
+
     public void UpHp()
     {
         nowhp = this.nowhp + PotionInfo.instance.Up();
