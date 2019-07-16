@@ -29,8 +29,17 @@ public class StartScene : MonoBehaviour
         flag = true;
     }
 
-    
-    
+    public void SButtonDown()
+    {
+        SceneManager.LoadScene("GameScene2");
+    }
+
+    public void EButtonDown()
+    {
+        SceneManager.LoadScene("ScriptScene");
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -38,13 +47,7 @@ public class StartScene : MonoBehaviour
 
             SceneManager.LoadScene("GameScene2");
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("GameScene2");
-        }
-
-            SceneManager.LoadScene("GameScene2");
-
+    
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();

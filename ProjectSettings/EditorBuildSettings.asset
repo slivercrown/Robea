@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/\uC52C\uB4E4\uBAA8\uC74C/GameScene2.unity"
     guid: 2feff4e04502fc64ab62730962542167
-  - enabled: 0
-    path: "Assets/\uC52C\uB4E4\uBAA8\uC74C/InformationScene.unity"
-    guid: 592746c2a33ce884e92feec1aa965b87
+  - enabled: 1
+    path: "Assets/\uC52C\uB4E4\uBAA8\uC74C/ScriptScene.unity"
+    guid: feec32ea9a6fc794db540fd67e6b5522
   - enabled: 1
     path: "Assets/\uC52C\uB4E4\uBAA8\uC74C/EndScene.unity"
     guid: db1fc04b2512a824eafce87117674d4f

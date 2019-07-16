@@ -39,7 +39,7 @@ public class SkillDirector2 : MonoBehaviour
 
 
 
-        this.skill2.GetComponent<Text>().text = "파이어볼 : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "Meteor : " + this.count.ToString("F0");
         
 
     }
@@ -48,7 +48,7 @@ public class SkillDirector2 : MonoBehaviour
     {
         count -= 1;
         
-        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "Meteor  : " + this.count.ToString("F0");
 
        
 
@@ -58,7 +58,7 @@ public class SkillDirector2 : MonoBehaviour
     {
         count -= 1;
         
-        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "Meteor  : " + this.count.ToString("F0");
 
        
 
@@ -69,7 +69,7 @@ public class SkillDirector2 : MonoBehaviour
     {
         count -= 1;
 
-        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "Meteor  : " + this.count.ToString("F0");
 
         
 
@@ -80,7 +80,7 @@ public class SkillDirector2 : MonoBehaviour
     {
         count -= 1;
         
-        this.skill2.GetComponent<Text>().text = "파이어볼  : " + this.count.ToString("F0");
+        this.skill2.GetComponent<Text>().text = "Meteor  : " + this.count.ToString("F0");
 
        
       

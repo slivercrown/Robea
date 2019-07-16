@@ -34,8 +34,8 @@ public class HpDirector : MonoBehaviour
 
         this.nowhp = 10;
         this.duration = 0;
-        this.playerhp.GetComponent<Text>().text = "체력 : " + this.nowhp.ToString("F0");
-        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+        this.playerhp.GetComponent<Text>().text = this.nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text = this.duration.ToString("F0");
 
     }
 
@@ -43,7 +43,7 @@ public class HpDirector : MonoBehaviour
     {
         
     }
-   
+
 
 
     // Update is called once per frame
@@ -63,8 +63,8 @@ public class HpDirector : MonoBehaviour
         }
         
 
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
-        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+        this.playerhp.GetComponent<Text>().text =  nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text =  this.duration.ToString("F0");
 
 
         if (nowhp > 10)
@@ -96,8 +96,8 @@ public class HpDirector : MonoBehaviour
         }
        
         
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
-        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+        this.playerhp.GetComponent<Text>().text = nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text =  this.duration.ToString("F0");
 
         if (nowhp > 10)
         {
@@ -130,8 +130,8 @@ public class HpDirector : MonoBehaviour
         }
 
 
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
-        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+        this.playerhp.GetComponent<Text>().text =  nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text = this.duration.ToString("F0");
 
         if (nowhp > 10)
         {
@@ -164,8 +164,8 @@ public class HpDirector : MonoBehaviour
         }
 
 
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
-        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+        this.playerhp.GetComponent<Text>().text =  nowhp.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text = this.duration.ToString("F0");
 
         if (nowhp > 10)
         {
@@ -190,7 +190,7 @@ public class HpDirector : MonoBehaviour
         nowhp = 10;
         }
 
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
+        this.playerhp.GetComponent<Text>().text =  nowhp.ToString("F0");
      }
 
     public void DownHp()
@@ -202,7 +202,7 @@ public class HpDirector : MonoBehaviour
             SceneManager.LoadScene("EndScene");
         }
 
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
+        this.playerhp.GetComponent<Text>().text =  nowhp.ToString("F0");
     }
 
 
@@ -216,9 +216,9 @@ public class HpDirector : MonoBehaviour
         }
         
     
-        this.playerhp.GetComponent<Text>().text = "체력 : " + nowhp.ToString("F0");
+        this.playerhp.GetComponent<Text>().text =  nowhp.ToString("F0");
 
-        this.weaponhp.GetComponent<Text>().text = "무기공격력 : " + this.duration.ToString("F0");
+        this.weaponhp.GetComponent<Text>().text =  this.duration.ToString("F0");
     }
 
 

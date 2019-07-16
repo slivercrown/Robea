@@ -39,8 +39,8 @@ public class SkillEffect : MonoBehaviour
         Vector2 p2 = this.player.transform.position;
         Vector2 dir = p1 - p2;
         float d = dir.magnitude;
-        float r3 = 8.0f;
-        float r4 = 8.0f;
+        float r3 = 4.0f;
+        float r4 = 4.0f;
 
 
         if (StartScene.instance.SD()==true)
@@ -433,7 +433,7 @@ public class SkillEffect : MonoBehaviour
 
                         SkillDirector2.instance.count = 5;
 
-                        this.skill2.GetComponent<Text>().text = "파이어볼  : " + SkillDirector2.instance.count.ToString("F0");
+                        this.skill2.GetComponent<Text>().text = "Meteor  : " + SkillDirector2.instance.count.ToString("F0");
 
                     
                 }

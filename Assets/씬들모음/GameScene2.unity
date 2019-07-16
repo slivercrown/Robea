@@ -138,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 83702837}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3.75, z: 0}
-  m_LocalScale: {x: 0.75, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 1
@@ -180,12 +180,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46818262, g: 0.4802156, b: 0.5943396, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.754717, g: 0.4505904, b: 0.252759, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -307,7 +307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD654\uC5FC\uD3ED\uD48D : 15"
+  m_Text: 'Meteor : 5'
 --- !u!222 &332547759
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 346846318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.9, y: 1.2, z: 0}
-  m_LocalScale: {x: 0.73, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 5
@@ -384,12 +384,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46818262, g: 0.4802156, b: 0.5943396, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.7490196, g: 0.4509804, b: 0.2509804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -429,7 +429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -570}
+  m_AnchoredPosition: {x: -230, y: 660}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364900050
@@ -465,7 +465,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC810\uC218 : "
+  m_Text: 'score : 9999 '
 --- !u!222 &364900051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -539,7 +539,7 @@ Transform:
   m_GameObject: {fileID: 406387323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.9, y: 3.75, z: 0}
-  m_LocalScale: {x: 0.73, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 0
@@ -581,12 +581,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46226418, g: 0.36414206, b: 0.36414206, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.3207547, g: 0.10439658, b: 0.10439658, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -626,7 +626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -430}
+  m_AnchoredPosition: {x: 0, y: 660}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435029348
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -651,18 +651,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB0A8\uC740 \uC2DC\uAC04 : "
+  m_Text: 'Timer : 60'
 --- !u!222 &435029349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -681,6 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458392044}
   - component: {fileID: 458392043}
+  - component: {fileID: 458392045}
   m_Layer: 0
   m_Name: potion2
   m_TagString: Untagged
@@ -715,6 +716,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &458392045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458392042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b7cdc3fd2b90249adf0b2093c5ca39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sosi: {fileID: 0}
+  mpos: {x: 0, y: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +867,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 0a81c33c9d204eb4595bb8928585131d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -939,7 +954,7 @@ Transform:
   m_GameObject: {fileID: 553013432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.9, y: -1.35, z: 0}
-  m_LocalScale: {x: 0.73, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 6
@@ -981,12 +996,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46226418, g: 0.36414206, b: 0.36414206, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.32156864, g: 0.105882354, b: 0.105882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1213,7 +1228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC2DC\uAC04\uB418\uB3CC\uB9AC\uAE30 : 10"
+  m_Text: 'TimeWind : 10'
 --- !u!222 &680135240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1256,7 +1271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -640}
+  m_AnchoredPosition: {x: 295, y: 660}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705509932
@@ -1281,7 +1296,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1292,7 +1307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCD5C\uACE0\uC810\uC218 : 9999"
+  m_Text: 'bestscore : 9999'
 --- !u!222 &705509933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1327,7 +1342,7 @@ Transform:
   m_GameObject: {fileID: 716827875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.2, z: 0}
-  m_LocalScale: {x: 0.75, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 4
@@ -1369,12 +1384,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46226418, g: 0.36414206, b: 0.36414206, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.32156864, g: 0.105882354, b: 0.105882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1455,7 +1470,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1515,7 +1530,7 @@ Transform:
   m_GameObject: {fileID: 747939646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.9, y: -1.35, z: 0}
-  m_LocalScale: {x: 0.73, y: 1, z: 3}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 3}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 8
@@ -1556,13 +1571,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46226418, g: 0.36414206, b: 0.36414206, a: 1}
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.32156864, g: 0.105882354, b: 0.105882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1594,7 +1609,7 @@ Transform:
   m_GameObject: {fileID: 940324048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.9, y: 3.75, z: 0}
-  m_LocalScale: {x: 0.73, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 2
@@ -1635,13 +1650,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46226418, g: 0.36414206, b: 0.36414206, a: 1}
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.32156864, g: 0.105882354, b: 0.105882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1794,6 +1809,28 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 282375699}
+        m_MethodName: LButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1510894978}
+        m_MethodName: LButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1233632325}
         m_MethodName: LButtonDown
         m_Mode: 1
         m_Arguments:
@@ -1959,6 +1996,7 @@ GameObject:
   - component: {fileID: 1233632322}
   - component: {fileID: 1233632324}
   - component: {fileID: 1233632323}
+  - component: {fileID: 1233632325}
   m_Layer: 5
   m_Name: weaponhp
   m_TagString: Untagged
@@ -1982,7 +2020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -500}
+  m_AnchoredPosition: {x: 250, y: 0}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233632323
@@ -1998,7 +2036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.061409745, g: 0.1325248, b: 0.8679245, a: 1}
+  m_Color: {r: 0.08877714, g: 0.78970355, b: 0.8962264, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2018,7 +2056,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBB34\uAE30\uACF5\uACA9\uB825 : \n"
+  m_Text: '4
+
+'
 --- !u!222 &1233632324
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2027,6 +2067,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233632321}
   m_CullTransparentMesh: 0
+--- !u!114 &1233632325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233632321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae65608fe2d89b41b6dcf5830bab274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerhp: {fileID: 0}
+  weaponhp: {fileID: 0}
 --- !u!1 &1267431020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,7 +2166,7 @@ Transform:
   m_GameObject: {fileID: 1279990016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.9, y: 1.2, z: 0}
-  m_LocalScale: {x: 0.73, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 3
@@ -2154,12 +2208,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46818262, g: 0.4802156, b: 0.5943396, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.7490196, g: 0.4509804, b: 0.2509804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2381,6 +2435,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1510894978}
+        m_MethodName: UButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1233632325}
+        m_MethodName: UButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1355473039
@@ -2526,6 +2602,7 @@ GameObject:
   - component: {fileID: 1510894975}
   - component: {fileID: 1510894977}
   - component: {fileID: 1510894976}
+  - component: {fileID: 1510894978}
   m_Layer: 5
   m_Name: playerhp
   m_TagString: Untagged
@@ -2549,7 +2626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -430}
+  m_AnchoredPosition: {x: 30, y: 0}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1510894976
@@ -2585,7 +2662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCCB4\uB825 : "
+  m_Text: 10
 --- !u!222 &1510894977
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2594,6 +2671,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510894974}
   m_CullTransparentMesh: 0
+--- !u!114 &1510894978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510894974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae65608fe2d89b41b6dcf5830bab274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerhp: {fileID: 0}
+  weaponhp: {fileID: 0}
 --- !u!1 &1543718520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,7 +2755,7 @@ Transform:
   m_GameObject: {fileID: 1647641785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.35, z: 0}
-  m_LocalScale: {x: 0.75, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 380151319}
   m_RootOrder: 7
@@ -2705,13 +2796,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9a1dbd66572d13f43911ffa278d5a4c9, type: 3}
-  m_Color: {r: 0.46818262, g: 0.4802156, b: 0.5943396, a: 1}
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: a34a79cea36e6594a9e9cb0e903b3a2c, type: 3}
+  m_Color: {r: 0.7490196, g: 0.4509804, b: 0.2509804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.77, y: 1.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3120,6 +3211,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1510894978}
+        m_MethodName: DButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1233632325}
+        m_MethodName: DButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1814355581
@@ -3185,6 +3298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860561906}
   - component: {fileID: 1860561905}
+  - component: {fileID: 1860561907}
   m_Layer: 0
   m_Name: monsterinfo3
   m_TagString: Untagged
@@ -3219,6 +3333,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860561907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860561904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b7cdc3fd2b90249adf0b2093c5ca39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sosi: {fileID: 0}
+  mpos: {x: 0, y: 0}
 --- !u!1 &1929457300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,6 +3688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2039104443}
   - component: {fileID: 2039104442}
+  - component: {fileID: 2039104444}
   m_Layer: 0
   m_Name: monsterinfo4
   m_TagString: Untagged
@@ -3594,6 +3723,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039104444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039104441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b7cdc3fd2b90249adf0b2093c5ca39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sosi: {fileID: 0}
+  mpos: {x: 0, y: 0}
 --- !u!1 &2069630391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3800,6 +3943,28 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 282375699}
+        m_MethodName: RButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1510894978}
+        m_MethodName: RButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1233632325}
         m_MethodName: RButtonDown
         m_Mode: 1
         m_Arguments:

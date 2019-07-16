@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class ScoreRecord : MonoBehaviour
 {
@@ -32,9 +34,9 @@ public class ScoreRecord : MonoBehaviour
 
         ScoreRecord.instance = this;    
 
-        this.score.GetComponent<Text>().text = "점수 : " + nowscore.ToString("F0");
+        this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
-        this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+        this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
 
     }
 
@@ -42,21 +44,21 @@ public class ScoreRecord : MonoBehaviour
     public void record()
     {
         nowscore = this.nowscore + MonsterInfo.instance.monsterhp;
-        this.score.GetComponent<Text>().text = "점수 : " + nowscore.ToString("F0");
+        this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
         
         
         
 
         if (bscore > nowscore)
         {
-           this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+           this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
         }
 
 
         if (bscore <= nowscore)
         {
             bscore = nowscore;
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
             PlayerPrefs.SetInt(temp3, bscore);
         }
         
@@ -66,20 +68,20 @@ public class ScoreRecord : MonoBehaviour
     public void record2()
     {
         nowscore = this.nowscore + MonsterInfo2.instance.monsterhp;
-        this.score.GetComponent<Text>().text = "점수 : " + nowscore.ToString("F0");
+        this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
 
 
         if (bscore > nowscore)
         {
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
         }
 
 
         if (bscore <= nowscore)
         {
             bscore = nowscore;
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
             PlayerPrefs.SetInt(temp3, bscore);
         }
         
@@ -89,20 +91,20 @@ public class ScoreRecord : MonoBehaviour
     public void record4()
     {
         nowscore = this.nowscore + MonsterInfo4.instance.monsterhp;
-        this.score.GetComponent<Text>().text = "점수 : " + nowscore.ToString("F0");
+        this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
 
 
         if (bscore > nowscore)
         {
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
         }
 
 
         if (bscore <= nowscore)
         {
             bscore = nowscore;
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
             PlayerPrefs.SetInt(temp3, bscore);
         }
 
@@ -112,20 +114,20 @@ public class ScoreRecord : MonoBehaviour
     public void record3()
     {
         nowscore = this.nowscore + CoinInfo.instance.scoreup;
-        this.score.GetComponent<Text>().text = "점수 : " + nowscore.ToString("F0");
+        this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
 
 
         if (bscore > nowscore)
         {
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
         }
 
 
         if (bscore <= nowscore)
         {
             bscore = nowscore;
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
             PlayerPrefs.SetInt(temp3, bscore);
         }
 
@@ -135,20 +137,20 @@ public class ScoreRecord : MonoBehaviour
     public void record5()
     {
         nowscore = this.nowscore + MonsterInfo3.instance.monsterhp;
-        this.score.GetComponent<Text>().text = "점수 : " + nowscore.ToString("F0");
+        this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
 
 
         if (bscore > nowscore)
         {
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
         }
 
 
         if (bscore <= nowscore)
         {
             bscore = nowscore;
-            this.bestscore.GetComponent<Text>().text = "최고점수 : " + bscore.ToString("F0");
+            this.bestscore.GetComponent<Text>().text = "bestscore : " + bscore.ToString("F0");
             PlayerPrefs.SetInt(temp3, bscore);
         }
 

@@ -34,7 +34,7 @@ public class TimeLimit : MonoBehaviour
         limittime -= Time.deltaTime;
 
 
-        this.timer.GetComponent<Text>().text = ("남은 시간 : ") + Mathf.Round(SkillDirector.instance.TimeWind()) + "초";
+        this.timer.GetComponent<Text>().text = ("timer : ") + Mathf.Round(SkillDirector.instance.TimeWind()) + "s";
         
        
         if(this.limittime <= 0)
