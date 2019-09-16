@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
 var MAX_SPEED = 400
-var ACCELERATION = 5000
+var ACCELERATION = 7000
 var motion = Vector2()
+var stage_size = Vector2(960,544)
 var can_shoot = true
-var shootAngle = 0
+
 
 const BULLET_SCENE = preload("res://Bullet.tscn")
 
@@ -17,6 +18,8 @@ func _physics_process(delta):
 	else:
 		apply_movement(axis * ACCELERATION * delta)
 	motion = move_and_slide(motion)
+	position.x = clamp(position.x, 0, stage_size.x)
+	position.y = clamp(position.y, 0, stage_size.y)
 	if(Input.is_action_pressed("key_shoot")):
 		shoot()
 	

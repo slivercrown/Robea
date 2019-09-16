@@ -1,18 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://M484BulletCollection1.png" type="Texture" id=3]
+[ext_resource path="res://GridSnapper.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.0
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 0.299774, 0 )
+position = Vector2( 240, 136 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite_Player" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -31,4 +29,18 @@ position = Vector2( 24, 0 )
 
 [node name="GunTimer" type="Timer" parent="."]
 wait_time = 0.4
+
+[node name="GridSnapper" type="Position2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="GridSnapper"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_smoothed = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
+smoothing_speed = 20.0
+editor_draw_drag_margin = true
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
