@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export var BULLET_SPEED = 300
+export var BULLET_SPEED = 200
 
 var velocity = Vector2()
 
