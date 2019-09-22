@@ -11,10 +11,7 @@ public class ButtonControl : MonoBehaviour
     GameObject UButton;
     GameObject DButton;
 
-    public float maxx = 300.0f;
-    public float minx = -300.0f;
-    public float maxy = 3.6f;
-    public float miny = -1.2f;
+   
 
     void Start()
     {
@@ -29,32 +26,44 @@ public class ButtonControl : MonoBehaviour
 
     public void LButtonDown()
     {
+      
+        
         transform.Translate(-90.0f, 0, 0);  
         //transform.Translate(-330.0f, 0, 0); //갤럭시6용
-        Debug.Log(transform.position.y);
+        
+       
     }
 
     public void RButtonDown()
     {
+       
+
         transform.Translate(90.0f, 0, 0);
         //transform.Translate(330.0f, 0, 0); //갤럭시6용
+        
+
     }
 
     public void UButtonDown()
     {
-        transform.Translate(0, 125.0f, 0);
-        //transform.Translate(0,400.0f, 0); //갤럭시6용
+       
+       transform.Translate(0, 125.0f, 0);
+       //transform.Translate(0,400.0f, 0); //갤럭시6용
 
+       
     }
 
     public void DButtonDown()
     {
-        transform.Translate(0, -125.0f, 0);
-        //transform.Translate(0, -400.0f, 0); //갤럭시6용
+
+
+       transform.Translate(0, -125.0f, 0);
+       //transform.Translate(0, -400.0f, 0); //갤럭시6용
+
+
+        
 
     }
-
-
     // Update is called once per frame
     /// <summary>
     /*

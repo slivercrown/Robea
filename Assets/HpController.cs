@@ -20,7 +20,7 @@ public class HpController : MonoBehaviour
     {
         transform.Translate(-100.0f, 0, 0);
         //transform.Translate(-330.0f, 0, 0); //갤럭시6용
-        Debug.Log(transform.position.y);
+        //Debug.Log(transform.position.y);
     }
 
     public void RButtonDown()

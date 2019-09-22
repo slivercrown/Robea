@@ -12,9 +12,12 @@ public class ScoreRecord : MonoBehaviour
     GameObject bestscore;
     public int nowscore;
     public int bscore;   // 이전 게임과 이번 게임의 값중 큰 값
+
+    public int savedscore;
     
 
     public string temp3 = "bscore";
+    public string temp0 = "savedscore";
 
     public static ScoreRecord instance;
 
@@ -30,6 +33,7 @@ public class ScoreRecord : MonoBehaviour
         this.bestscore = GameObject.Find("bestscore");
         this.nowscore = 0;
         bscore = PlayerPrefs.GetInt(temp3,0);
+        savedscore = PlayerPrefs.GetInt(temp0, 0);
 
 
         ScoreRecord.instance = this;    
@@ -45,9 +49,9 @@ public class ScoreRecord : MonoBehaviour
     {
         nowscore = this.nowscore + MonsterInfo.instance.monsterhp;
         this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
-        
-        
-        
+
+        savedscore = nowscore;
+
 
         if (bscore > nowscore)
         {
@@ -70,7 +74,7 @@ public class ScoreRecord : MonoBehaviour
         nowscore = this.nowscore + MonsterInfo2.instance.monsterhp;
         this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
-
+        savedscore = nowscore;
 
         if (bscore > nowscore)
         {
@@ -93,7 +97,7 @@ public class ScoreRecord : MonoBehaviour
         nowscore = this.nowscore + MonsterInfo4.instance.monsterhp;
         this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
-
+        savedscore = nowscore;
 
         if (bscore > nowscore)
         {
@@ -116,7 +120,7 @@ public class ScoreRecord : MonoBehaviour
         nowscore = this.nowscore + CoinInfo.instance.scoreup;
         this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
-
+        savedscore = nowscore;
 
         if (bscore > nowscore)
         {
@@ -139,7 +143,7 @@ public class ScoreRecord : MonoBehaviour
         nowscore = this.nowscore + MonsterInfo3.instance.monsterhp;
         this.score.GetComponent<Text>().text = "score : " + nowscore.ToString("F0");
 
-
+        savedscore = nowscore;
 
         if (bscore > nowscore)
         {
@@ -167,6 +171,13 @@ public class ScoreRecord : MonoBehaviour
     public int result2()
     {
         return bscore;
+    }
+
+    public int result3()
+    {
+        savedscore = nowscore;
+        PlayerPrefs.SetInt(temp0, savedscore);
+        return savedscore;
     }
 
 

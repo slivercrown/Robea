@@ -39,18 +39,20 @@ public class StartScene : MonoBehaviour
         SceneManager.LoadScene("ScriptScene");
     }
 
+    public void RButtonDown()
+    {
+        SceneManager.LoadScene("RankingScene");
+    }
+
+    public void KButtonDown()
+    {
+        SceneManager.LoadScene("SkillScene");
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount == 1)
-
-            SceneManager.LoadScene("GameScene2");
-
-    
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+      
     }
 }

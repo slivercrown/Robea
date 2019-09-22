@@ -46,21 +46,28 @@ public class SkillEffect : MonoBehaviour
         if (StartScene.instance.SD()==true)
         {
             if (SkillDirector2.instance.count <= 0)
-
             {
+                
+
                 if (d < r3 + r4)
                 {
-                   
-                        Destroy(gameObject);
 
-                        Debug.Log("///////////////////////////////////////////" + SkillDirector2.instance.count);
+
+                    //Destroy(gameObject);
+                    //Debug.Log("///////////////////////////////////////////" + SkillDirector2.instance.count);
 
 
                         if (gameObject.transform.position.x > -3.0f && gameObject.transform.position.x < -1.0f && gameObject.transform.position.y > 3.0f && gameObject.transform.position.y < 4.0f)
 
                         {
+                            GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                            monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF1();
 
-                            Debug.Log("1번입니다.");
+                            Destroy(gameObject);
+
+
+                            // Debug.Log("1번입니다.");
+
                             GameObject monsterGenerator = GameObject.Find("MonsterGenerator");
                             monsterGenerator.GetComponent<MonsterGenerator>().FireGenerate1();
 
@@ -102,9 +109,12 @@ public class SkillEffect : MonoBehaviour
 
                         if (gameObject.transform.position.x > -1.0f && gameObject.transform.position.x < 1.0f && gameObject.transform.position.y > 3.0f && gameObject.transform.position.y < 4.0f)
                         {
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF2();
 
+                        Destroy(gameObject);
 
-                            Debug.Log("2번입니다.");
+                        //Debug.Log("2번입니다.");
                             GameObject monsterGenerator2 = GameObject.Find("MonsterGenerator");
                             monsterGenerator2.GetComponent<MonsterGenerator>().FireGenerate2();
 
@@ -146,9 +156,12 @@ public class SkillEffect : MonoBehaviour
 
                         if (gameObject.transform.position.x > 1.0f && gameObject.transform.position.x < 3.0f && gameObject.transform.position.y > 3.0f && gameObject.transform.position.y < 4.0f)
                         {
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF3();
 
+                        Destroy(gameObject);
                             //Destroy(gameObject);
-                            Debug.Log("3번입니다.");
+                            //Debug.Log("3번입니다.");
                             GameObject monsterGenerator3 = GameObject.Find("MonsterGenerator");
                             monsterGenerator3.GetComponent<MonsterGenerator>().FireGenerate3();
                         if (this.gameObject.tag == "Monster1")
@@ -187,9 +200,11 @@ public class SkillEffect : MonoBehaviour
 
                         if (gameObject.transform.position.x > -3.0f && gameObject.transform.position.x < -1.0f && gameObject.transform.position.y > 1.0f && gameObject.transform.position.y < 2.0f)
                         {
-
-                            //Destroy(gameObject);
-                            Debug.Log("4번입니다.");
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF4();
+                        Destroy(gameObject);
+                        //Destroy(gameObject);
+                        //Debug.Log("4번입니다.");
                             GameObject monsterGenerator4 = GameObject.Find("MonsterGenerator");
                             monsterGenerator4.GetComponent<MonsterGenerator>().FireGenerate4();
                         if (this.gameObject.tag == "Monster1")
@@ -229,8 +244,11 @@ public class SkillEffect : MonoBehaviour
                         if (gameObject.transform.position.x > -1.0f && gameObject.transform.position.x < 1.0f && gameObject.transform.position.y > 1.0f && gameObject.transform.position.y < 2.0f)
                         {
 
-                            // Destroy(gameObject);
-                            Debug.Log("5번입니다.");
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF5();
+                        Destroy(gameObject);
+                        // Destroy(gameObject);
+                       // Debug.Log("5번입니다.");
                             GameObject monsterGenerator5 = GameObject.Find("MonsterGenerator");
                             monsterGenerator5.GetComponent<MonsterGenerator>().FireGenerate5();
                         if (this.gameObject.tag == "Monster1")
@@ -269,9 +287,11 @@ public class SkillEffect : MonoBehaviour
 
                         if (gameObject.transform.position.x > 1.0f && gameObject.transform.position.x < 3.0f && gameObject.transform.position.y > 1.0f && gameObject.transform.position.y < 2.0f)
                         {
-
-                            //Destroy(gameObject);
-                            Debug.Log("6번입니다.");
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF6();
+                        Destroy(gameObject);
+                        //Destroy(gameObject);
+                       // Debug.Log("6번입니다.");
                             GameObject monsterGenerator6 = GameObject.Find("MonsterGenerator");
                             monsterGenerator6.GetComponent<MonsterGenerator>().FireGenerate6();
 
@@ -308,11 +328,13 @@ public class SkillEffect : MonoBehaviour
                         }
                     }
 
-                        else if (gameObject.transform.position.x > -3.0f && gameObject.transform.position.x < -1.0f && gameObject.transform.position.y > -2.0f && gameObject.transform.position.y < 0.0f)
+                        if (gameObject.transform.position.x > -3.0f && gameObject.transform.position.x < -1.0f && gameObject.transform.position.y > -2.0f && gameObject.transform.position.y < 0.0f)
                         {
-
-                            //Destroy(gameObject);
-                            Debug.Log("7번입니다.");
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF7();
+                        Destroy(gameObject);
+                        //Destroy(gameObject);
+                        //Debug.Log("7번입니다.");
                             GameObject monsterGenerator7 = GameObject.Find("MonsterGenerator");
                             monsterGenerator7.GetComponent<MonsterGenerator>().FireGenerate7();
                         if (this.gameObject.tag == "Monster1")
@@ -351,9 +373,11 @@ public class SkillEffect : MonoBehaviour
 
                         if (gameObject.transform.position.x > -1.0f && gameObject.transform.position.x < 1.0f && gameObject.transform.position.y > -2.0f && gameObject.transform.position.y < 0.0f)
                         {
-
-                            //Destroy(gameObject);
-                            Debug.Log("8번입니다.");
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF8();
+                        Destroy(gameObject);
+                        //Destroy(gameObject);
+                        //Debug.Log("8번입니다.");
                             GameObject monsterGenerator8 = GameObject.Find("MonsterGenerator");
                             monsterGenerator8.GetComponent<MonsterGenerator>().FireGenerate8();
                         if (this.gameObject.tag == "Monster1")
@@ -392,11 +416,14 @@ public class SkillEffect : MonoBehaviour
 
                         if (gameObject.transform.position.x > 1.0f && gameObject.transform.position.x < 3.0f && gameObject.transform.position.y > -2.0f && gameObject.transform.position.y < 0.0f)
                         {
-
-                            //Destroy(gameObject);
-                            Debug.Log("9번입니다.");
+                        GameObject monsterGeneratora = GameObject.Find("MonsterGenerator");
+                        monsterGeneratora.GetComponent<MonsterGenerator>().GenerateF9();
+                        Destroy(gameObject);
+                        //Destroy(gameObject);
+                       // Debug.Log("9번입니다.");
                             GameObject monsterGenerator9 = GameObject.Find("MonsterGenerator");
                             monsterGenerator9.GetComponent<MonsterGenerator>().FireGenerate9();
+
                         if (this.gameObject.tag == "Monster1")
                         {
                             GameObject scoredirector = GameObject.Find("ScoreRecord");

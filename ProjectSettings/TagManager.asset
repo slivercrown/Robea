@@ -14,6 +14,8 @@ TagManager:
   - coin
   - Monster4
   - Monster3
+  - fire
+  - icon
   layers:
   - Default
   - TransparentFX

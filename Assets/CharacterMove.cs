@@ -60,9 +60,9 @@ public class CharacterMove : MonoBehaviour
         key = -0.8f;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minx, maxx), Mathf.Clamp(transform.position.y, miny, maxy), transform.position.z);
         nowchar = transform.position;
-        Debug.Log(nowchar);
+        //Debug.Log(nowchar);
         beforechar = nowchar - new Vector2(-1.9f, 0);
-        Debug.Log(beforechar);
+        //Debug.Log(beforechar);
 
         if (key != 0)
         {
@@ -77,9 +77,9 @@ public class CharacterMove : MonoBehaviour
         key = 0.8f;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minx, maxx), Mathf.Clamp(transform.position.y, miny, maxy), transform.position.z);
         nowchar = transform.position;
-        Debug.Log(nowchar);
+        //Debug.Log(nowchar);
         beforechar = nowchar - new Vector2(1.9f, 0);
-        Debug.Log(beforechar);
+        //Debug.Log(beforechar);
 
         if (key != 0)
         {
@@ -93,9 +93,9 @@ public class CharacterMove : MonoBehaviour
         transform.Translate(0, -2.55f, 0);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minx, maxx), Mathf.Clamp(transform.position.y, miny, maxy));
         nowchar = transform.position;
-        Debug.Log(nowchar);
+        //Debug.Log(nowchar);
         beforechar = nowchar - new Vector2(0, -2.55f);
-        Debug.Log(beforechar);
+        //Debug.Log(beforechar);
         //    Debug.Log(SkillDirector2.instance.Fire());
         // Debug.Log(SkillDirector.instance.Wind());
         input = 3;
@@ -106,9 +106,9 @@ public class CharacterMove : MonoBehaviour
         transform.Translate(0, 2.55f, 0);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minx, maxx), Mathf.Clamp(transform.position.y, miny, maxy), transform.position.z);
         nowchar = transform.position;
-        Debug.Log(nowchar);
+        //Debug.Log(nowchar);
         beforechar = nowchar - new Vector2(0, 2.55f);
-        Debug.Log(beforechar);
+        //Debug.Log(beforechar);
         // Debug.Log(SkillDirector2.instance.Fire());
         // Debug.Log(SkillDirector.instance.Wind());
         input = 4;

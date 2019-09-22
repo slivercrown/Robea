@@ -24,6 +24,8 @@ public class MonsterGenerator : MonoBehaviour
 
     public GameObject coinPrefab;
 
+    public GameObject FirePrefab;
+
     public GameObject posi;
 
     CharacterMove cMove;
@@ -49,7 +51,7 @@ public class MonsterGenerator : MonoBehaviour
     {
 
         int num;
-        num = Random.Range(1, 15);
+        num = Random.Range(1, 14);
 
         if (num == 1 || num == 5)
         {
@@ -75,19 +77,19 @@ public class MonsterGenerator : MonoBehaviour
             go4.transform.position = cMove.beforechar;
         }
 
-        if (num == 7 || num == 11)
+        if (num == 7 )
         {
             GameObject go5 = Instantiate(potionPrefab2) as GameObject;
             go5.transform.position = cMove.beforechar;
         }
 
-        if (num == 8 || num == 12)
+        if (num == 8 || num == 11)
         {
             GameObject go5 = Instantiate(coinPrefab) as GameObject;
             go5.transform.position = cMove.beforechar;
         }
 
-        if (num == 13)
+        if (num == 12)
         {
             if (ScoreRecord.instance.result() > 60)
             {
@@ -102,7 +104,7 @@ public class MonsterGenerator : MonoBehaviour
             }
         }
 
-        if (num == 14)
+        if (num == 13)
         {
             if (ScoreRecord.instance.result() > 30)
             {
@@ -119,41 +121,87 @@ public class MonsterGenerator : MonoBehaviour
 
     }
     
-    public void GenerateF()
+    public void GenerateF1()
     {
-        int num;
-        num = Random.Range(1, 8);
+            GameObject goa = Instantiate(FirePrefab) as GameObject;
+            goa.transform.position = new Vector3(-1.9f, 3.75f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
 
-        if (num == 1 || num == 5)
-        {
-            GameObject go = Instantiate(monsterPrefab) as GameObject;
-            go.transform.position = cMove.beforechar;
-        }
-
-        if (num == 2 || num == 6)
-        {
-            GameObject go2 = Instantiate(monsterPrefab2) as GameObject;
-            go2.transform.position = cMove.beforechar;
-        }
-
-        if (num == 3)
-        {
-            GameObject go3 = Instantiate(potionPrefab) as GameObject;
-            go3.transform.position = cMove.beforechar;
-        }
-
-        if (num == 4)
-        {
-            GameObject go4 = Instantiate(weaponPrefab) as GameObject;
-            go4.transform.position = cMove.beforechar;
-        }
-
-        if (num == 7)
-        {
-            GameObject go5 = Instantiate(potionPrefab2) as GameObject;
-            go5.transform.position = cMove.beforechar;
-        }
     }
+
+    public void GenerateF2()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(0, 3.75f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+
+    }
+
+    public void GenerateF3()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(1.9f, 3.75f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+
+    }
+
+    public void GenerateF4()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(-1.9f, 1.2f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+
+    }
+
+    public void GenerateF5()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(0, 1.2f, 0);
+        if(gameObject.tag == "fire")
+        Destroy(gameObject);
+
+    }
+
+    public void GenerateF6()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(1.9f, 1.2f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+
+    }
+
+    public void GenerateF7()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(-1.9f, -1.35f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+
+    }
+
+    public void GenerateF8()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(0.0f, -1.35f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+
+    }
+
+    public void GenerateF9()
+    {
+        GameObject goa = Instantiate(FirePrefab) as GameObject;
+        goa.transform.position = new Vector3(1.9f, -1.35f, 0);
+        if (gameObject.tag == "fire")
+            Destroy(gameObject);
+    }
+
+
 
     public void FireGenerate1()
     {

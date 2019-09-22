@@ -24,7 +24,7 @@ public class SkillDirector : MonoBehaviour
         
         SkillDirector.instance = this;
 
-        count1 = 10;
+        count1 = 12;
         this.skill.GetComponent<Text>().text = "TimeWind : " + this.count1.ToString("F0");
         //this.skill.GetComponent<Text>().text = "시간되돌리기 : " + SkillDirector.instance.Wind().ToString("F0");
 
@@ -35,28 +35,28 @@ public class SkillDirector : MonoBehaviour
         {
             count1 -= 1;
             this.skill.GetComponent<Text>().text = "TimeWind : " + this.count1.ToString("F0");
-            Debug.Log(count1);
+          //  Debug.Log(count1);
         }
 
         public void RButtonDown()
         {
             count1 -= 1;
             this.skill.GetComponent<Text>().text = "TimeWind : " + this.count1.ToString("F0");
-        Debug.Log(count1);
+        //Debug.Log(count1);
         }
 
         public void UButtonDown()
         {
             count1 -= 1;
             this.skill.GetComponent<Text>().text = "TimeWind : " + this.count1.ToString("F0");
-        Debug.Log(count1);
+       //    Debug.Log(count1);
         }
 
         public void DButtonDown()
         {
             count1 -= 1;
             this.skill.GetComponent<Text>().text = "TimeWind : " + this.count1.ToString("F0");
-            Debug.Log(count1);
+        //    Debug.Log(count1);
         }
 
     
@@ -74,7 +74,7 @@ public class SkillDirector : MonoBehaviour
         t += 2;
         TimeLimit.instance.limittime += 2;
 
-        count1 = 10;
+        count1 = 12;
         this.skill.GetComponent<Text>().text = "TimeWind : " + this.count1.ToString("F0");
 
         }

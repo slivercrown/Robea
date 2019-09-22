@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 617d840f3425a9146bdf5f55b34fc437, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b7b9dcd9a49d2849828cc37f58ac0d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
     type: 3}
   coinPrefab: {fileID: 536557528887482541, guid: 54747527ca3973a4b80b8f62c1051164,
     type: 3}
+  FirePrefab: {fileID: 0}
   posi: {fileID: 0}
 --- !u!114 &8080109977803633620
 MonoBehaviour:
