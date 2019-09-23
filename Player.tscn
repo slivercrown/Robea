@@ -40,8 +40,6 @@ script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="GridSnapper"]
 current = true
-limit_left = 0
-limit_top = 0
 limit_smoothed = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
