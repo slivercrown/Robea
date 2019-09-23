@@ -3,7 +3,7 @@ extends KinematicBody2D
 var MAX_SPEED = 200 
 var ACCELERATION = 5000
 var motion = Vector2()
-var stage_size = Vector2(360,180) 
+var stage_size = Vector2(640,360) 
 var can_shoot = true
 
 const BULLET_SCENE = preload("res://Bullet.tscn")

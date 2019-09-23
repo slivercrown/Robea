@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export var BULLET_SPEED = 200
+export var BULLET_SPEED = 700
 
 var velocity = Vector2()
 
@@ -10,6 +10,7 @@ func start_at(dir, pos):
 	set_global_rotation(dir)
 	set_global_position(pos)
 	velocity = Vector2(BULLET_SPEED, 0).rotated(dir)
+	get_parent().get_node("ScreenShake").screen_shake(0.1,1,100)
 
 func _ready():
 	set_process(true)
