@@ -18,8 +18,8 @@ func _physics_process(delta):
 	else: # 이동 
 		apply_movement(axis * ACCELERATION * delta) 
 	motion = move_and_slide(motion)
-	position.x = clamp(position.x, 0, stage_size.x) # 이동 한계점 설정 
-	position.y = clamp(position.y, 0, stage_size.y)
+	#position.x = clamp(position.x, 0, stage_size.x) # 이동 한계점 설정 
+	#position.y = clamp(position.y, 0, stage_size.y)
 	
 	if(Input.is_action_pressed("key_shoot")):  # 무기 발사 
 		shoot()

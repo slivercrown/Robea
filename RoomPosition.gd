@@ -1,34 +1,6 @@
 extends Position2D
 
-var map_size
-
-var piece1
-var piece2
-var piece3
-
-var piece4
-var piece5
-var piece6
-
-var piece7
-var piece8
-var piece9
-#change to array
-"""
-var p1 = $p1.get_position()
-var p2 = $p2.get_position()
-var p3 = $p3.get_position()
-
-var p4 = $p4.get_position()
-var p5 = $p5.get_position()
-var p6 = $p6.get_position()
-
-var p7 = $p7.get_position()
-var p8 = $p8.get_position()
-var p9 = $p9.get_position()
-#change to array
-"""
-#each scene load
+onready var testroom = preload("res://TestRoom.tscn")
 
 var map_array = [ [0, 0, 0, 0],
 				[0, 0, 0, 0],
@@ -39,6 +11,15 @@ var map_array = [ [0, 0, 0, 0],
 
 func _ready():
 	init()
+	for y in range(4):
+		var row = map_array[y]
+		for x in range(4):
+			if row[x]:
+				var room = testroom.instance()
+				var room_pos = Vector2(320 * x, 180 * y) + Vector2(-320, -180)
+				room.set_position(room_pos)
+				get_node("/root/World").call_deferred("add_child",room)
+				
 
 
 func init():
