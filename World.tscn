@@ -211,9 +211,11 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+visible = false
 z_index = 1
 
 [node name="icon" type="Sprite" parent="."]
+visible = false
 position = Vector2( 354.541, 30.9404 )
 texture = ExtResource( 2 )
 
