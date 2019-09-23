@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cave.png" type="Texture" id=2]
 [ext_resource path="res://ScreenShake.gd" type="Script" id=3]
+[ext_resource path="res://RoomPosition.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -226,4 +227,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 
 script = ExtResource( 3 )
 
 [node name="Tween" type="Tween" parent="ScreenShake"]
+
+[node name="RoomPosition" parent="." instance=ExtResource( 4 )]
 [connection signal="tween_completed" from="ScreenShake/Tween" to="ScreenShake" method="_on_Tween_tween_completed"]

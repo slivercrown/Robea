@@ -30,9 +30,9 @@ var p9 = $p9.get_position()
 
 #each scene load
 
-var map_array = [ 0, 0, 0,
-				0, 0, 0,
-				0, 0, 0]
+var map_array = [ [0, 0, 0],
+				[0, 0, 0],
+				[0, 0, 0]]
 #3 by 3 matrices
 #0 is not instance, 1 is instance
 

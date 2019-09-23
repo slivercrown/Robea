@@ -13,3 +13,4 @@ script = ExtResource( 1 )
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
 tile_set = SubResource( 1 )
+format = 1
