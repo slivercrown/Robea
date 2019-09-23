@@ -1,8 +1,11 @@
 extends Node2D
+export (PackedScene) var Piece
+
+#onready var piece1 = get_tree().get_root().get_node("/scene_random_change/piece")
 
 var map_size
 
-var piece1
+#var piece1#node
 var piece2
 var piece3
 
@@ -14,7 +17,7 @@ var piece7
 var piece8
 var piece9
 #change to array
-
+"""
 var p1 = $p1.get_position()
 var p2 = $p2.get_position()
 var p3 = $p3.get_position()
@@ -26,23 +29,33 @@ var p6 = $p6.get_position()
 var p7 = $p7.get_position()
 var p8 = $p8.get_position()
 var p9 = $p9.get_position()
-#change to array
+#change to array"""
+
+#var p1 = $p1.get_position_in_parent()
+var p1 = $p1.get_position()
 
 #each scene load
 
 var map_array = [ 0, 0, 0,
 				0, 0, 0,
 				0, 0, 0]
+				
 #3 by 3 matrices
 #0 is not instance, 1 is instance
 
 func _ready():
-	pass #total process
+	var t = Piece.instance()
+	print(t.get_position())
+	print(p1.get_position())
+	add_child(t)
+	#pass #total process
 
 func random_process():
 	for i in range(9):
 		map_array[i] = randi() % 2 #0 or 1
 	#0 to 9 map -> 0 or 1
+	
+	
 
 
 func position_mapping(piece):
