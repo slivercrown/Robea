@@ -14,8 +14,8 @@ func _ready():
 
 func _physics_process(delta):
 	update_grid_position()
-	#print(position)
-	#print(grid_size)
+	print(position)
+	print(grid_size)
 
 
 func update_grid_position():
