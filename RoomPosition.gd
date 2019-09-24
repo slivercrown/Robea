@@ -6,8 +6,7 @@ var map_array = [ [0, 0, 0, 0],
 				[0, 0, 0, 0],
 				[0, 0, 0, 0],
 				[0, 0, 0, 0]]
-#3 by 3 matrices
-#0 is not instance, 1 is instance
+
 
 func _ready():
 	init()
@@ -34,6 +33,12 @@ func init():
 		x = clamp(x, 0, 3)
 		y = clamp(y, 0, 3)
 	print(map_array)
+	print(map_array[0].count(1))
+	print(map_array[1].count(1))
+	print(map_array[2].count(1))
+	print(map_array[3].count(1))
+	
+	
 		
 func lengthdir_x(length, direction):
 	return length * cos(direction)
