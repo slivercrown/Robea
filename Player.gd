@@ -1,9 +1,8 @@
 extends KinematicBody2D
 
-var MAX_SPEED = 200 
-var ACCELERATION = 5000
+var MAX_SPEED = 230 
+var ACCELERATION = 6000
 var motion = Vector2()
-var stage_size = Vector2(640,360) 
 var can_shoot = true
 
 const BULLET_SCENE = preload("res://Bullet.tscn")
@@ -18,8 +17,6 @@ func _physics_process(delta):
 	else: # 이동 
 		apply_movement(axis * ACCELERATION * delta) 
 	motion = move_and_slide(motion)
-	#position.x = clamp(position.x, 0, stage_size.x) # 이동 한계점 설정 
-	#position.y = clamp(position.y, 0, stage_size.y)
 	
 	if(Input.is_action_pressed("key_shoot")):  # 무기 발사 
 		shoot()

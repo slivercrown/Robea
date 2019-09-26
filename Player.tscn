@@ -23,6 +23,7 @@ region_rect = Rect2( 0, 0, 16, 32 )
 shape = SubResource( 1 )
 
 [node name="Sprite_Gun" type="Sprite" parent="."]
+editor/display_folded = true
 visible = false
 texture = ExtResource( 3 )
 offset = Vector2( 12, 0 )
