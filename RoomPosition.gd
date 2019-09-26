@@ -15,7 +15,7 @@ func _ready():
 		for x in range(4):
 			if row[x]:
 				var room = testroom.instance()
-				var room_pos = Vector2(320 * x, 180 * y) + Vector2(-320, -180)
+				var room_pos = Vector2(480 * x, 270 * y) + Vector2(-480, -270)
 				room.set_position(room_pos)
 				get_node("/root/World").call_deferred("add_child",room)
 				

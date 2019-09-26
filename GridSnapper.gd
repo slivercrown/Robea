@@ -1,7 +1,7 @@
 extends Position2D
 
 var grid_position = Vector2() 
-var grid_size = Vector2(320, 180) 
+var grid_size = Vector2(480, 270) 
 
 onready var parent = get_parent() # Player 가져오기
 
