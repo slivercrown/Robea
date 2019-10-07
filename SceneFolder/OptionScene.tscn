@@ -12,10 +12,10 @@ script = ExtResource( 1 )
 
 [node name="Title" type="Label" parent="."]
 anchor_right = 1.0
-margin_left = -6.83771
-margin_top = 288.066
-margin_right = -6.83771
-margin_bottom = 353.066
+margin_left = -3.03772
+margin_top = 118.966
+margin_right = -3.03772
+margin_bottom = 183.966
 custom_fonts/font = ExtResource( 2 )
 text = "OptionsScene"
 align = 1

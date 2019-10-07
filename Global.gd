@@ -1,6 +1,5 @@
 extends Node
 
-
 var current_scene = null
 
 func _ready():
@@ -13,7 +12,6 @@ func goto_scene(path):
     # Deleting the current scene at this point is
     # a bad idea, because it may still be executing code.
     # This will result in a crash or unexpected behavior.
-
     # The solution is to defer the load to a later time, when
     # we can be sure that no code from the current scene is running:
 
@@ -35,7 +33,4 @@ func _deferred_goto_scene(path):
 
     # Optionally, to make it compatible with the SceneTree.change_scene() API.
     get_tree().set_current_scene(current_scene)
-	
-
-	
 	

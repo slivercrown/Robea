@@ -65,4 +65,5 @@ func takeDamage():
 	$TextureProgress.updateHealth()
 	if(health <= 0):
 		self.state = STATE.DEAD
-		#get_tree().change_scene("res://SceneFolder/GameScene.tscn")
+		#get_tree().change_scene("res://SceneFolder/GameOverScene.tscn")
+		Global.goto_scene("res://SceneFolder/GameOverScene.tscn")
