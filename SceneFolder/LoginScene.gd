@@ -13,6 +13,7 @@ func _connect():
 
 #사용자 입력 받아서 
 func _on_login_pressed():
+	Global.goto_scene("res://SceneFolder/MainScene.tscn")
 	if get_node("user_id") != null: 
 		id = get_node("user_id").get_text()
 	if get_node("user_pw") != null: 
