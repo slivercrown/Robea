@@ -35,9 +35,9 @@ custom_fonts/font = ExtResource( 2 )
 icon = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 335.479
+margin_left = 333.479
 margin_top = 177.865
-margin_right = 1021.48
+margin_right = 1019.48
 margin_bottom = 583.865
 rect_scale = Vector2( 0.207644, 0.220526 )
 custom_fonts/font = ExtResource( 2 )
