@@ -11,7 +11,12 @@
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Player" type="KinematicBody2D"]
+<<<<<<< Updated upstream
 position = Vector2( 248.154, 109.253 )
+=======
+position = Vector2( 240, 135 )
+z_index = 1
+>>>>>>> Stashed changes
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true

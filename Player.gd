@@ -8,9 +8,16 @@ var MAX_SPEED = 230
 var ACCELERATION = 6000
 var motion = Vector2()
 var can_shoot = true
+<<<<<<< Updated upstream
 var health = default_health
 enum STATE {DEAD, ALIVE}
 var state = STATE.ALIVE
+=======
+var start_position = Vector2(240, 135)
+
+const BULLET_SCENE = preload("res://Bullet.tscn")
+
+>>>>>>> Stashed changes
 
 func _physics_process(delta):
 	$Sprite_Gun.look_at(get_global_mouse_position()) # 무기 방향 
@@ -24,8 +31,21 @@ func _physics_process(delta):
 	
 	if(Input.is_action_pressed("key_shoot")):  # 무기 발사 
 		shoot()
+<<<<<<< Updated upstream
 	
 	
+=======
+	"""if(Input.is_action_pressed("mouse_right")):  # 무기 발사 
+		test()
+
+func test():
+	var new_player = preload('res://Player2.tscn').instance()
+	#new_player.set_network_master(get_tree().get_network_unique_id())
+	add_child(new_player)
+	var info = Network.self_data
+	new_player.init(info.name, info.position)"""
+
+>>>>>>> Stashed changes
 func shoot():
 	if can_shoot and state:
 		can_shoot = false
@@ -52,12 +72,15 @@ func apply_friction(amount):
 	
 	
 func apply_movement(accel):
+	if is_on_wall():
+			motion = Vector2(0,0)
 	motion += accel
 	motion = motion.clamped(MAX_SPEED)
 
 
 func _on_GunTimer_timeout(): #GunTimer에서 지정한 시간이 다 되면
 	can_shoot = true
+<<<<<<< Updated upstream
 	
 	
 func takeDamage(): 
@@ -67,3 +90,8 @@ func takeDamage():
 		self.state = STATE.DEAD
 		#get_tree().change_scene("res://SceneFolder/GameOverScene.tscn")
 		Global.goto_scene("res://SceneFolder/GameOverScene.tscn")
+=======
+
+func init(nickname, start_position): # for network setting
+	global_position = start_position
+>>>>>>> Stashed changes
