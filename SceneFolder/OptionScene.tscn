@@ -25,19 +25,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -511.0
-margin_top = -298.0
-margin_right = 13.0
-margin_bottom = 220.0
+margin_left = -240.406
+margin_top = -134.711
+margin_right = 283.594
+margin_bottom = 383.289
 rect_scale = Vector2( 0.2, 0.2 )
 custom_fonts/font = ExtResource( 2 )
 icon = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 922.101
-margin_top = 4.74646
-margin_right = 1914.1
-margin_bottom = 990.746
+margin_left = 382.5
+margin_top = -2.85355
+margin_right = 1374.5
+margin_bottom = 983.146
 rect_scale = Vector2( 0.1, 0.1 )
 custom_fonts/font = ExtResource( 2 )
 icon = ExtResource( 4 )

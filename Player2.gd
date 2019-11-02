@@ -7,7 +7,6 @@ const default_damage = 10
 var MAX_SPEED = 230 
 var ACCELERATION = 6000
 var motion = Vector2()
-var gotHurt = Vector2()
 var can_shoot = true
 var health = default_health
 enum STATE {DEAD, ALIVE}
@@ -23,8 +22,9 @@ func _physics_process(delta):
 		apply_movement(axis * ACCELERATION * delta) 
 	motion = move_and_slide(motion)
 	
-	if(Input.is_action_pressed("key_shoot")):  # 무기 발사 
+	if(Input.is_action_pressed("my_shoot")):  # 무기 발사 
 		shoot()
+	
 	
 func shoot():
 	if can_shoot and state:
@@ -34,12 +34,13 @@ func shoot():
 		get_parent().add_child(b)
 		b.start_at($Sprite_Gun.get_global_rotation(),get_node("Sprite_Gun/FirePositon").get_global_position()) # 총알 생성 
 
+		
 
 func get_input_axis():
 	var axis = Vector2.ZERO
 	if state: 
-		axis.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")) # right - left로 좌우 방향 결정
-		axis.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")) # down - up으로 상하 방향 결정 
+		axis.x = int(Input.is_action_pressed("my_right")) - int(Input.is_action_pressed("my_left")) # right - left로 좌우 방향 결정
+		axis.y = int(Input.is_action_pressed("my_down")) - int(Input.is_action_pressed("my_up")) # down - up으로 상하 방향 결정 
 	return axis.normalized() # 벡터값을 1로 만들어줌 
 	
 	
@@ -60,9 +61,7 @@ func _on_GunTimer_timeout(): #GunTimer에서 지정한 시간이 다 되면
 	
 	
 func takeDamage(): 
-	if($Collider.gotHurt()):
-		$TextureProgress.updateHealth()
-		if(health <= 0):
-			self.state = STATE.DEAD
-			Global.goto_scene("res://SceneFolder/GameOverScene.tscn")		
-	
+	$TextureProgress.updateHealth()
+	if(health <= 0):
+		self.state = STATE.DEAD
+		Global.goto_scene("res://SceneFolder/GameOverScene.tscn")

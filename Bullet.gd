@@ -17,6 +17,7 @@ func _ready():
 
 func _process(delta):
 	set_global_position(get_global_position() + velocity * delta)
+		
 
 func destroy():
 	queue_free()
