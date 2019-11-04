@@ -30,7 +30,7 @@ func init():
 	randomize()
 	var x = 1
 	var y = 1
-	for i in range(16):
+	for i in range(256):
 		map_array[x][y] = 1
 		var dir = (randi() % 4)*90
 		x += lengthdir_x(1, dir)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Init/Init.gd" type="Script" id=1]
+[ext_resource path="res://character.png" type="Texture" id=2]
+[ext_resource path="res://Init/CheckNetwork.gd" type="Script" id=3]
+
+[node name="Node2D" type="Control"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="SpriteImage" type="Sprite" parent="."]
+position = Vector2( 249.348, 129.707 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 16, 32 )
+
+[node name="HTTPCheckNetwork" type="HTTPRequest" parent="."]
+script = ExtResource( 3 )
+[connection signal="connection_success" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_connection_success"]
+[connection signal="error_connection_failed" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_error_connection_failed"]
