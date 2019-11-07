@@ -1,3 +1,4 @@
+#https://github.com/cagdasc/godot-network-checker
 extends HTTPRequest
 
 signal connection_success
