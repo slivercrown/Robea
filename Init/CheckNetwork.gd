@@ -30,6 +30,7 @@ func on_request_result(result, response_code, headers, body):
 	match result:
 		RESULT_SUCCESS:
 			emit_signal("connection_success")
+			print('connection success')
 			
 		RESULT_CHUNKED_BODY_SIZE_MISMATCH:
 			emit_signal("error_connection_failed", RESULT_CHUNKED_BODY_SIZE_MISMATCH, "RESULT_CHUNKED_BODY_SIZE_MISMATCH")

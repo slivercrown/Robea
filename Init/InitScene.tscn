@@ -8,9 +8,6 @@
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_horizontal_guides_": [  ]
-}
 
 [node name="SpriteImage" type="Sprite" parent="."]
 position = Vector2( 249.348, 129.707 )

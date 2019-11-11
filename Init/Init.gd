@@ -1,4 +1,5 @@
 extends Control
+var gpgs = null
 
 func init():
 	# call CheckNetwork()
@@ -6,19 +7,27 @@ func init():
 
 func _on_HTTPCheckNetwork_connection_success():
 	#단말이 NW 연결 됐으면 > 로그인 씬으로
-	Global.goto_scene("res://SceneFolder/LoginScene.tscn ")
-	pass 
+	print('before gpgs')
+	#OS.shell_open("http://localhost:5000")
+	
+#	if Engine.has_singleton("GooglePlay"):
+#		print('init gpgs')
+#		var gpgs = Engine.get_singleton("GooglePlay");
+#		gpgs.init(get_instance_id(), true)
+#		gpgs.keepScreenOn(true)
+#		gpgs.clearCache()
+	#var google = Engine.get_singleton("GooglePlay");
+	#google.init(get_instance_id(), true)
+	
+	Global.goto_scene("res://Init/LoginScene.tscn")
+	
 
 func _on_HTTPCheckNetwork_error_connection_failed(code, message):
 	#단말이 NW 연결 됐으면 > 에러 
-	pass
+	print('Please check your Network Connection...')
 
-#로그인 상태 확인해서 
-#로그인 기록이 있으면	> 바로 메인씬
-#로그인 기록이 없으면 	> 회원가입씬
-#
-#회원가입씬에선 뭘 해주지?
-
-#No loader found for resource: res://SceneFolder/LoginScene.tscn 
-#Attempt to call function 'instance' in base null instance on a null instance
-#>> Create any scene and play it. Select 'root' viewport.
+#TODO: 네트워크 연결 확인 
+func _connect():
+	var network = NetworkedMultiplayerENet.new()
+	network.create_client("127.0.0.1", 4242)
+	get_tree().set_network_peer(network)

@@ -13,17 +13,20 @@ _global_script_class_icons={
 
 }
 
+[android]
+
+modules="org/godotengine/godot/GooglePlay"
+
 [application]
 
 config/name="Autoload"
-run/main_scene="res://SceneFolder/LoginScene.tscn"
+run/main_scene="res://Init/InitScene.tscn"
 config/icon="res://Gadget/icon.png"
 
 [autoload]
 
-CheckNetwork="*res://Init/CheckNetwork.gd"
-Global="*res://Global.gd"
 dir="*res://Monster/base/directions.gd"
+Global="*res://Global.gd"
 
 [display]
 
