@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backbutton.png-bd131068895d39c6ca84c7fa258b6181.stex"
+path="res://.import/topni.png-9062d820ba9f9331207690a522d9485b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gadget/backbutton.png"
-dest_files=[ "res://.import/backbutton.png-bd131068895d39c6ca84c7fa258b6181.stex" ]
+source_file="res://Init/Gadget/topni.png"
+dest_files=[ "res://.import/topni.png-9062d820ba9f9331207690a522d9485b.stex" ]
 
 [params]
 

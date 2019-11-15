@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/homebutton.png-c7246ee21518ff06e7c54a537faebe5c.stex"
+path="res://.import/homebutton.png-00549fc3731c111c8a67f7a114e32f87.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gadget/homebutton.png"
-dest_files=[ "res://.import/homebutton.png-c7246ee21518ff06e7c54a537faebe5c.stex" ]
+source_file="res://Init/Gadget/homebutton.png"
+dest_files=[ "res://.import/homebutton.png-00549fc3731c111c8a67f7a114e32f87.stex" ]
 
 [params]
 

@@ -2,8 +2,7 @@ extends Control
 var google = null
 
 func init():
-	# call CheckNetwork()
-	get_node("HTTPCheckNetwork")._ready()	
+	get_node("CheckNetwork")._ready()
 
 func _on_HTTPCheckNetwork_connection_success():
 	#단말이 NW 연결 됐으면 > 로그인 씬으로

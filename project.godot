@@ -21,7 +21,7 @@ modules="org/godotengine/godot/GooglePlay"
 
 config/name="Autoload"
 run/main_scene="res://Init/InitScene.tscn"
-config/icon="res://Gadget/icon.png"
+config/icon="res://Init/Gadget/icon.png"
 
 [autoload]
 

@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ShopScene.gd" type="Script" id=1]
-[ext_resource path="res://Gadget/font1.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Gadget/backbutton.png" type="Texture" id=3]
-[ext_resource path="res://Gadget/homebutton.png" type="Texture" id=4]
+[ext_resource path="res://Init/Gadget/font1.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Init/Gadget/backbutton.png" type="Texture" id=3]
+[ext_resource path="res://Init/Gadget/homebutton.png" type="Texture" id=4]
+
 
 [node name="ShopScene" type="Control"]
 anchor_right = 1.0
