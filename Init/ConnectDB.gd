@@ -9,10 +9,16 @@ func _init():
 	RESPONSE = HTTP.connect_to_host("101.101.160.229", 5000, false)
 	
 	# Wait until resolved and connected
+	var timeout = 0
 	while(HTTP.get_status() == HTTPClient.STATUS_CONNECTING or HTTP.get_status() == HTTPClient.STATUS_RESOLVING):
 	    HTTP.poll()
 	    print("Connecting...")
-	    OS.delay_msec(10)
+	    OS.delay_msec(10) 
+	    timeout += 10
+	    if timeout > 1000: 
+	    	print("connection timeout !!!")
+	    	break
+		
 	
 	# Error catch: Could not connect
 	assert(HTTP.get_status() == HTTPClient.STATUS_CONNECTED)
@@ -32,10 +38,15 @@ func createAccountPOST(data):
 	print("Connected!")
 	
 	# Keep polling until the request is going on
+	var timeout = 0
 	while (HTTP.get_status() == HTTPClient.STATUS_REQUESTING):
 	    HTTP.poll()
 	    print("Requesting...")
 	    OS.delay_msec(10)
+	    timeout += 10
+	    if timeout > 1000: 
+	    	print("connection timeout !!!")
+	    	break
 	
 	# Make sure request finished
 	assert(HTTP.get_status() == HTTPClient.STATUS_BODY or HTTP.get_status() == HTTPClient.STATUS_CONNECTED)
@@ -87,10 +98,15 @@ func loginGET(data):
 	print("Connected!")
 	
 	# Keep polling until the request is going on
+	var timeout = 0
 	while (HTTP.get_status() == HTTPClient.STATUS_REQUESTING):
 	    HTTP.poll()
 	    print("Requesting...")
 	    OS.delay_msec(10)
+	    timeout += 10
+	    if timeout > 1000: 
+	    	print("connection timeout !!!")
+	    	break
 	
 	# Make sure request finished
 	assert(HTTP.get_status() == HTTPClient.STATUS_BODY or HTTP.get_status() == HTTPClient.STATUS_CONNECTED)
