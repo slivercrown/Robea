@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Init/Init.gd" type="Script" id=1]
+[ext_resource path="res://character.png" type="Texture" id=2]
+[ext_resource path="res://Init/CheckNetwork.gd" type="Script" id=3]
+[ext_resource path="res://healthBar_background.png" type="Texture" id=4]
+[ext_resource path="res://healthBar_health.png" type="Texture" id=5]
+[ext_resource path="res://Init/Loadingbar.gd" type="Script" id=6]
+
+[node name="Node2D" type="Control"]
+script = ExtResource( 1 )
+
+[node name="SpriteImage" type="Sprite" parent="."]
+position = Vector2( 249.348, 129.707 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 16, 32 )
+
+[node name="HTTPCheckNetwork" type="HTTPRequest" parent="."]
+script = ExtResource( 3 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 279.0
+margin_top = 219.0
+margin_right = 429.0
+margin_bottom = 259.0
+max_value = 10.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+script = ExtResource( 6 )
+[connection signal="connection_success" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_connection_success"]
+[connection signal="error_connection_failed" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_error_connection_failed"]

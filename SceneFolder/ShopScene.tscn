@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ShopScene.gd" type="Script" id=1]
-[ext_resource path="res://Gadget/font1.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Gadget/backbutton.png" type="Texture" id=3]
-[ext_resource path="res://Gadget/homebutton.png" type="Texture" id=4]
+[ext_resource path="res://Init/Gadget/font1.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Init/Gadget/backbutton.png" type="Texture" id=3]
+[ext_resource path="res://Init/Gadget/homebutton.png" type="Texture" id=4]
 
 
 [node name="ShopScene" type="Control"]
@@ -16,10 +16,10 @@ margin_bottom = -1.85059
 script = ExtResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 332.954
-margin_top = 182.921
-margin_right = 651.954
-margin_bottom = 338.921
+margin_left = 84.0536
+margin_top = 97.4209
+margin_right = 403.054
+margin_bottom = 253.421
 custom_fonts/font = ExtResource( 2 )
 text = "ShopScene"
 
@@ -30,10 +30,10 @@ rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 919.508
-margin_top = 8.63388
-margin_right = 1911.51
-margin_bottom = 994.634
+margin_left = 374.207
+margin_top = 4.83388
+margin_right = 1366.21
+margin_bottom = 990.834
 rect_scale = Vector2( 0.1, 0.1 )
 icon = ExtResource( 4 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -13,11 +13,15 @@ _global_script_class_icons={
 
 }
 
+[android]
+
+modules="org/godotengine/godot/GooglePlay"
+
 [application]
 
 config/name="Autoload"
-run/main_scene="res://SceneFolder/LoginScene.tscn"
-config/icon="res://Gadget/icon.png"
+run/main_scene="res://Init/InitScene.tscn"
+config/icon="res://Init/Gadget/icon.png"
 
 [autoload]
 
@@ -32,6 +36,10 @@ window/size/test_width=960
 window/size/test_height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+default=false
 
 [input]
 
@@ -114,15 +122,19 @@ key_shoot={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
-<<<<<<< Updated upstream
-=======
 mouse_right={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
->>>>>>> Stashed changes
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+quality/driver/fallback_to_gles2=true
+quality/2d/use_pixel_snap=true
+threads/thread_model=2
+vram_compression/import_etc=true
+quality/shadows/filter_mode=0
+environment/default_clear_color=Color( 0.270588, 0.270588, 0.270588, 1 )
 environment/default_environment="res://default_env.tres"

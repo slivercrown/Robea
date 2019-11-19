@@ -1,8 +1,5 @@
 extends Position2D
 
-func _ready():
-	pass
-"""
 onready var testroom = preload("res://TestRoom.tscn")
 onready var wallTop = preload("res://Wall_Top.tscn")
 onready var wallLeft = preload("res://Wall_Left.tscn")
@@ -40,7 +37,11 @@ func init():
 		y += lengthdir_y(1, dir)
 		x = clamp(x, 0, 3)
 		y = clamp(y, 0, 3)
-	
+	print(map_array)
+	"""print(map_array[0].count(1))
+	print(map_array[1].count(1))
+	print(map_array[2].count(1))
+	print(map_array[3].count(1))"""
 	
 	
 func lengthdir_x(length, direction):
@@ -70,5 +71,3 @@ func create_walls(x, y, room):
 		var wall_pos = Vector2(480 * x, 270 * y) + Vector2(-480, -270)
 		bwall.set_position(wall_pos)
 		get_node("/root/World").call_deferred("add_child",bwall)
-		
-		"""
