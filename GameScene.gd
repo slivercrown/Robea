@@ -10,7 +10,7 @@ func _ready():
 	
 	
 func _on_Button_pressed():
-    Global.goto_scene("res://SceneFolder/GameOverScene.tscn")
+	Global.goto_scene("res://SceneFolder/GameOverScene.tscn")
 
 
 	

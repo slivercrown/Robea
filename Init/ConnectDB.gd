@@ -11,13 +11,13 @@ func _init():
 	# Wait until resolved and connected
 	var timeout = 0
 	while(HTTP.get_status() == HTTPClient.STATUS_CONNECTING or HTTP.get_status() == HTTPClient.STATUS_RESOLVING):
-	    HTTP.poll()
-	    print("Connecting...")
-	    OS.delay_msec(10) 
-	    timeout += 10
-	    if timeout > 1000: 
-	    	print("connection timeout !!!")
-	    	break
+		HTTP.poll()
+		print("Connecting...")
+		OS.delay_msec(10) 
+		timeout += 10
+		if timeout > 1000: 
+			print("connection timeout !!!")
+			break
 		
 	
 	# Error catch: Could not connect
@@ -27,10 +27,10 @@ func _init():
 func createAccountPOST(data):
 	# Check for a GET or POST command
 	if data == "":
-	    header =["User-Agent: Pirulo/1.0 (Godot)", "Accept: */*"]
-	    RESPONSE = HTTP.request(HTTPClient.METHOD_GET, url, header)
+		header =["User-Agent: Pirulo/1.0 (Godot)", "Accept: */*"]
+		RESPONSE = HTTP.request(HTTPClient.METHOD_GET, url, header)
 	else:
-	    #QUERY = HTTPClient.query_string_from_dict(data)
+		#QUERY = HTTPClient.query_string_from_dict(data)
 		RESPONSE = HTTP.request(HTTPClient.METHOD_POST, "/", header, data)
 	
 	# Make sure all is OK
@@ -40,13 +40,13 @@ func createAccountPOST(data):
 	# Keep polling until the request is going on
 	var timeout = 0
 	while (HTTP.get_status() == HTTPClient.STATUS_REQUESTING):
-	    HTTP.poll()
-	    print("Requesting...")
-	    OS.delay_msec(10)
-	    timeout += 10
-	    if timeout > 1000: 
-	    	print("connection timeout !!!")
-	    	break
+		HTTP.poll()
+		print("Requesting...")
+		OS.delay_msec(10)
+		timeout += 10
+		if timeout > 1000: 
+			print("connection timeout !!!")
+			break
 	
 	# Make sure request finished
 	assert(HTTP.get_status() == HTTPClient.STATUS_BODY or HTTP.get_status() == HTTPClient.STATUS_CONNECTED)
@@ -85,10 +85,10 @@ func createAccountPOST(data):
 func loginGET(data):
 	# Check for a GET or POST command
 	if data == "":
-	    header =["User-Agent: Pirulo/1.0 (Godot)", "Accept: */*"]
-	    RESPONSE = HTTP.request(HTTPClient.METHOD_GET, url, header)
+		header =["User-Agent: Pirulo/1.0 (Godot)", "Accept: */*"]
+		RESPONSE = HTTP.request(HTTPClient.METHOD_GET, url, header)
 	else:
-	    #QUERY = HTTPClient.query_string_from_dict(data)
+		#QUERY = HTTPClient.query_string_from_dict(data)
 		RESPONSE = HTTP.request(HTTPClient.METHOD_GET, "/", header, data)
 
 		print(".request RESPONSE: ", RESPONSE)
@@ -100,13 +100,13 @@ func loginGET(data):
 	# Keep polling until the request is going on
 	var timeout = 0
 	while (HTTP.get_status() == HTTPClient.STATUS_REQUESTING):
-	    HTTP.poll()
-	    print("Requesting...")
-	    OS.delay_msec(10)
-	    timeout += 10
-	    if timeout > 1000: 
-	    	print("connection timeout !!!")
-	    	break
+		HTTP.poll()
+		print("Requesting...")
+		OS.delay_msec(10)
+		timeout += 10
+		if timeout > 1000: 
+			print("connection timeout !!!")
+			break
 	
 	# Make sure request finished
 	assert(HTTP.get_status() == HTTPClient.STATUS_BODY or HTTP.get_status() == HTTPClient.STATUS_CONNECTED)

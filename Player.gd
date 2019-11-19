@@ -24,10 +24,8 @@ var health = default_health
 var DAMAGE = default_damage
 var SPEED = MAX_SPEED
 
-
-
 func _physics_process(delta):
-	$Sprite_Gun.look_at(get_global_mouse_position()) # 무기 방향 
+	$Sprite_Gun.look_at(get_global_mouse_position()) # 무기 방향
 	damage_loop(delta)
 	check_animation_loop()
 	animation_loop()
@@ -56,16 +54,24 @@ func shoot():
 		$GunTimer.start() # 무기 연사(장전) 시간 
 		var b = BULLET_SCENE.instance()
 		get_parent().add_child(b)
-		if sprite_flip:
-			b.start_at($Sprite_Gun.get_global_rotation(),Vector2(global_position.x-20,global_position.y-4)) # 총알 생성 
-		else :
-			b.start_at($Sprite_Gun.get_global_rotation(),Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
-		#get_node("Sprite_Gun/FirePositon").get_global_position()
 		
+		var aim = get_node("../JoystickAim/Joystick").output
+		aim[1] *= -1
+		var aimFloat = Vector2(angle_to(aim))
+		print("aimFloat is: ", aimFloat)
+		print("original is: ", $Sprite_Gun.get_global_rotation())
+		
+		if sprite_flip:
+			#b.start_at($Sprite_Gun.get_global_rotation(),Vector2(global_position.x-20,global_position.y-4)) # 총알 생성 
+			b.start_at(get_node("../JoystickAim/Joystick").output,Vector2(global_position.x-20,global_position.y-4)) # 총알 생성 
+		else :
+			#b.start_at($Sprite_Gun.get_global_rotation(),Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
+			b.start_at(get_node("../JoystickAim/Joystick").output,Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
+		#get_node("Sprite_Gun/FirePositon").get_global_position()
+
 func get_input_axis():
 	var axis = Vector2.ZERO
-	axis.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")) # right - left로 좌우 방향 결정
-	axis.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")) # down - up으로 상하 방향 결정 
+	axis = get_node("../JoystickMoving/Joystick").output
 	return axis.normalized() # 벡터값을 1로 만들어줌 
 	
 	
