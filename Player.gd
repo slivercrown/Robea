@@ -12,12 +12,6 @@ var motion = Vector2(0,0)
 var movedir = Vector2(0,0)
 var gotHurt = Vector2(0,0)
 var can_shoot = true
-var health = default_health
-enum STATE {DEAD, ALIVE}
-var state = STATE.ALIVE
-var start_position = Vector2(240, 135)
-
-const BULLET_SCENE = preload("res://Bullet.tscn")
 var hitstun = 0
 var knockdir = Vector2(0,0)
 enum STATE {IDLE, ATTACK}
@@ -29,6 +23,8 @@ var attacking = false
 var health = default_health
 var DAMAGE = default_damage
 var SPEED = MAX_SPEED
+
+
 
 func _physics_process(delta):
 	$Sprite_Gun.look_at(get_global_mouse_position()) # 무기 방향 
@@ -49,18 +45,10 @@ func _physics_process(delta):
 	
 	if(Input.is_action_pressed("key_shoot")):  # 무기 발사 
 		shoot()
-
-		"""
-	if(Input.is_action_pressed("mouse_right")):  # 무기 발사 
-		test()
-
-func test():
-	var new_player = preload('res://Player2.tscn').instance()
-	#new_player.set_network_master(get_tree().get_network_unique_id())
-	add_child(new_player)
-	var info = Network.self_data
-	new_player.init(info.name, info.position)"""
-
+	
+	if Input.is_action_just_released("key_shoot"):
+		state = STATE.IDLE
+	
 func shoot():
 	if can_shoot :
 		can_shoot = false
@@ -89,8 +77,6 @@ func apply_friction(amount):
 	
 	
 func apply_movement(accel):
-	if is_on_wall():
-			motion = Vector2(0,0)
 	motion += accel
 	motion = motion.clamped(MAX_SPEED)
 
@@ -100,12 +86,11 @@ func apply_knockback(accel):
 func _on_GunTimer_timeout(): #GunTimer에서 지정한 시간이 다 되면
 	can_shoot = true
 	
+	
 func takeDamage(): 
 	#health -= 10
 	$TextureProgress.updateHealth()
-
-func init(nickname, start_position): # for network setting
-	global_position = start_position	
+	
 		
 func damage_loop(delta):
 	if hitstun > 0:
