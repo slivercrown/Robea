@@ -1,24 +1,63 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://character.png" type="Texture" id=2]
-[ext_resource path="res://M484BulletCollection1.png" type="Texture" id=3]
-[ext_resource path="res://GridSnapper.gd" type="Script" id=4]
-[ext_resource path="res://healthBar_background.png" type="Texture" id=5]
-[ext_resource path="res://healthBar_health.png" type="Texture" id=6]
-[ext_resource path="res://TextureProgress.gd" type="Script" id=7]
+[ext_resource path="res://Player/Sprites/Idle/idle1.png" type="Texture" id=2]
+[ext_resource path="res://Player/Sprites/Idle/idle2.png" type="Texture" id=3]
+[ext_resource path="res://Player/Sprites/Idle/idle3.png" type="Texture" id=4]
+[ext_resource path="res://Player/Sprites/Idle/idle4.png" type="Texture" id=5]
+[ext_resource path="res://Player/Sprites/Attack/attack8.png" type="Texture" id=6]
+[ext_resource path="res://Player/Sprites/Attack/attack9.png" type="Texture" id=7]
+[ext_resource path="res://Player/Sprites/Attack/attack1.png" type="Texture" id=8]
+[ext_resource path="res://Player/Sprites/Attack/attack2.png" type="Texture" id=9]
+[ext_resource path="res://Player/Sprites/Attack/attack3.png" type="Texture" id=10]
+[ext_resource path="res://Player/Sprites/Attack/attack5.png" type="Texture" id=11]
+[ext_resource path="res://Player/Sprites/Attack/attack6.png" type="Texture" id=12]
+[ext_resource path="res://Player/Sprites/Attack/attack7.png" type="Texture" id=13]
+[ext_resource path="res://M484BulletCollection1.png" type="Texture" id=14]
+[ext_resource path="res://GridSnapper.gd" type="Script" id=15]
+[ext_resource path="res://healthBar_background.png" type="Texture" id=16]
+[ext_resource path="res://healthBar_health.png" type="Texture" id=17]
+[ext_resource path="res://TextureProgress.gd" type="Script" id=18]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="GDScript" id=2]
-script/source = "extends CollisionShape2D
-
-func _ready():
-	pass
-"
-
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12, 12 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Attack"
+length = 0.9
+loop = true
+
+[sub_resource type="Animation" id=5]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 240, 135 )
@@ -27,30 +66,33 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite_Player" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 16, 32 )
+[node name="Sprite_Player" type="AnimatedSprite" parent="."]
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Attack"
+frame = 5
+playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-script = SubResource( 2 )
+shape = SubResource( 2 )
 
 [node name="Sprite_Gun" type="Sprite" parent="."]
+editor/display_folded = true
 visible = false
-texture = ExtResource( 3 )
-offset = Vector2( 12, 0 )
+position = Vector2( 0, -4 )
+texture = ExtResource( 14 )
 region_enabled = true
 region_rect = Rect2( 64, 187, 28, 8 )
 
 [node name="FirePositon" type="Position2D" parent="Sprite_Gun"]
-position = Vector2( 24, 0 )
+position = Vector2( 20, 0 )
 
 [node name="GunTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.5
 
 [node name="GridSnapper" type="Position2D" parent="."]
-script = ExtResource( 4 )
+editor/display_folded = true
+script = ExtResource( 15 )
 
 [node name="Camera2D" type="Camera2D" parent="GridSnapper"]
 current = true
@@ -63,17 +105,22 @@ editor_draw_drag_margin = true
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 margin_left = -21.0
-margin_top = -20.0
+margin_top = -32.0
 margin_right = 129.0
-margin_bottom = 10.0
+margin_bottom = -2.0
 rect_scale = Vector2( 0.3, 0.3 )
 value = 100.0
-texture_under = ExtResource( 5 )
-texture_progress = ExtResource( 6 )
-script = ExtResource( 7 )
+texture_under = ExtResource( 16 )
+texture_progress = ExtResource( 17 )
+script = ExtResource( 18 )
 
 [node name="Hitbox" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Attack = SubResource( 4 )
+anims/Idle = SubResource( 5 )
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]

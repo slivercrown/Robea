@@ -25,7 +25,6 @@ config/icon="res://Init/Gadget/icon.png"
 
 [autoload]
 
-dir="*res://Monster/base/directions.gd"
 Global="*res://Global.gd"
 
 [display]
