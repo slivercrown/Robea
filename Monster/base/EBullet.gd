@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 export var BULLET_SPEED = 300
 
 const TYPE = "EBULLET"
@@ -12,7 +13,7 @@ func start_at(dir, pos):
 	set_global_rotation(dir)
 	set_global_position(pos)
 	velocity = Vector2(BULLET_SPEED, 0).rotated(dir)
-	get_parent().get_node("ScreenShake").screen_shake(0.1,1,100)
+	#get_parent().get_node("ScreenShake").screen_shake(0.1,1,100)
 
 func _ready():
 	set_process(true)
@@ -20,6 +21,7 @@ func _ready():
 func _process(delta):
 	set_global_position(get_global_position() + velocity * delta)
 		
+
 func destroy():
 	queue_free()
 

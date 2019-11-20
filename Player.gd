@@ -39,12 +39,7 @@ func _physics_process(delta):
 		else:
 			apply_knockback(knockdir.normalized() * ACCELERATION * delta *0.15 )
 	motion = move_and_slide(motion)
-	
-	#if(Input.is_action_pressed("key_shoot")):  # 무기 발사 
-	#	shoot()
-	#if Input.is_action_just_released("key_shoot"):
-	#	state = STATE.IDLE
-		
+
 	if pow(get_node("../JoystickAim/Joystick").output[0], 2) + pow(get_node("../JoystickAim/Joystick").output[1], 2) >= 0.7:
 		shoot()
 	else: 
@@ -59,7 +54,6 @@ func shoot():
 		var b = BULLET_SCENE.instance()
 		get_parent().add_child(b)
 		
-		#var aim은 Vector2 [x,y], 범위는  -1 <= x,y <= 1
 		var aim = get_node("../JoystickAim/Joystick").output
 		var aimFloat = aim.angle()
 		if aim[0] < 0:
@@ -70,12 +64,6 @@ func shoot():
 			$Sprite_Player.set_flip_h(false)
 			sprite_flip = false
 			b.start_at(aimFloat,Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
-		
-#		if sprite_flip:
-#			b.start_at(aimFloat,Vector2(global_position.x-20,global_position.y-4)) # 총알 생성 
-#		else :
-#			b.start_at(aimFloat,Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
-#		#get_node("Sprite_Gun/FirePositon").get_global_position()
 
 func get_input_axis():
 	var axis = Vector2.ZERO
@@ -88,13 +76,11 @@ func get_input_axis():
 		sprite_flip = false 
 	return axis.normalized() # 벡터값을 1로 만들어줌 
 	
-	
 func apply_friction(amount):
 	if (motion.length() > amount): 
 		motion -= motion.normalized() * amount
 	else:
 		motion = Vector2.ZERO
-	
 	
 func apply_movement(accel):
 	motion += accel
@@ -106,10 +92,8 @@ func apply_knockback(accel):
 func _on_GunTimer_timeout(): #GunTimer에서 지정한 시간이 다 되면
 	can_shoot = true
 	
-	
 func takeDamage(): 
 	$TextureProgress.updateHealth()
-	
 		
 func damage_loop(delta):
 	if hitstun > 0:
@@ -138,25 +122,9 @@ func animation_loop():
 				$Sprite_Player.set_flip_h(true)
 			else:
 				$Sprite_Player.set_flip_h(false)
-					
-				
-#				var aim = get_node("../JoystickAim/Joystick").output
-#				if(aim[0] < 0): 
-#					$Sprite_Player.set_flip_h(true)
-#					sprite_flip = true
-#				elif(aim[0] >= 0):
-#					$Sprite_Player.set_flip_h(false)
-#					sprite_flip = false
-				
-#				if ($Sprite_Gun.get_global_rotation_degrees() >= 90 && $Sprite_Gun.get_global_rotation_degrees() < 180) || ($Sprite_Gun.get_global_rotation_degrees() >= -180 && $Sprite_Gun.get_global_rotation_degrees() < -90):
-#					$Sprite_Player.set_flip_h(true)
-#					sprite_flip = true
-#				elif ($Sprite_Gun.get_global_rotation_degrees() >= 0 && $Sprite_Gun.get_global_rotation_degrees() < 90) || ($Sprite_Gun.get_global_rotation_degrees() >= -90 && $Sprite_Gun.get_global_rotation_degrees() < 0) :
-#					$Sprite_Player.set_flip_h(false)
-#					sprite_flip = false
-				
+
 func check_animation_loop():
 	if $Sprite_Player.animation == "Attack" && $Sprite_Player.frame == $Sprite_Player.frames.get_frame_count("Attack")-1:
 			if !Input.is_action_pressed("key_shoot"):
 				state = STATE.IDLE
-			
+

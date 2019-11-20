@@ -1,31 +1,71 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Init/Init.gd" type="Script" id=1]
-[ext_resource path="res://character.png" type="Texture" id=2]
-[ext_resource path="res://Init/CheckNetwork.gd" type="Script" id=3]
-[ext_resource path="res://healthBar_background.png" type="Texture" id=4]
-[ext_resource path="res://healthBar_health.png" type="Texture" id=5]
-[ext_resource path="res://Init/Loadingbar.gd" type="Script" id=6]
+[ext_resource path="res://Init/CheckNetwork.gd" type="Script" id=2]
+[ext_resource path="res://healthBar_background.png" type="Texture" id=3]
+[ext_resource path="res://healthBar_health.png" type="Texture" id=4]
+[ext_resource path="res://Init/Loadingbar.gd" type="Script" id=5]
+[ext_resource path="res://UI/K-029.jpg" type="Texture" id=6]
+[ext_resource path="res://Init/LoadingbarChar.gd" type="Script" id=7]
+[ext_resource path="res://character.png" type="Texture" id=8]
+[ext_resource path="res://UI/goal.png" type="Texture" id=9]
+[ext_resource path="res://UI/K-082.jpg" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 3.23517
 
 [node name="Node2D" type="Control"]
 script = ExtResource( 1 )
 
-[node name="SpriteImage" type="Sprite" parent="."]
-position = Vector2( 249.348, 129.707 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 16, 32 )
-
 [node name="HTTPCheckNetwork" type="HTTPRequest" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
-margin_left = 279.0
-margin_top = 219.0
-margin_right = 429.0
-margin_bottom = 259.0
+margin_left = 11.4798
+margin_top = 235.888
+margin_right = 161.48
+margin_bottom = 275.888
+rect_scale = Vector2( 3, 1 )
 max_value = 10.0
-texture_under = ExtResource( 4 )
-texture_progress = ExtResource( 5 )
-script = ExtResource( 6 )
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="background_sprite" type="Sprite" parent="."]
+position = Vector2( 238.92, 135.605 )
+scale = Vector2( 3.195, 1.793 )
+z_index = -4
+texture = ExtResource( 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -2.09502, 5.58673 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 41.9003, 227.658 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 33.5867, 17.2011, 31.7229 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 42.5986, 227.658 )
+shape = SubResource( 1 )
+
+[node name="Goal_sprite" type="Sprite" parent="."]
+position = Vector2( 424.24, 226.96 )
+scale = Vector2( 0.188698, 0.205622 )
+z_index = -3
+texture = ExtResource( 9 )
+
+[node name="Goal_sprite2" type="Sprite" parent="."]
+position = Vector2( 424.589, 244.418 )
+scale = Vector2( 0.208551, 0.366841 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="Subject_sprite" type="Sprite" parent="."]
+position = Vector2( 112, 48 )
+scale = Vector2( 0.333, 0.311 )
+texture = ExtResource( 10 )
 [connection signal="connection_success" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_connection_success"]
 [connection signal="error_connection_failed" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_error_connection_failed"]

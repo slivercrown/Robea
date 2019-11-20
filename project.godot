@@ -27,6 +27,7 @@ config/icon="res://Init/Gadget/icon.png"
 [autoload]
 
 Global="*res://Global.gd"
+Bgm="*res://Bgm.tscn"
 
 [display]
 

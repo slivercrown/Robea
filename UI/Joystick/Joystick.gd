@@ -42,7 +42,16 @@ onready var _handle := $Background/Handle
 onready var _original_color : Color = _handle.modulate
 onready var _original_position : Vector2 = _background.rect_position
 
+onready var validInputPos = _background.rect_global_position
+onready var validInputSize = _handle.rect_size
+
 func _gui_input(event: InputEvent) -> void:
+#	print("validPos: ", validInputPos[0], validInputPos[1])
+#	print("validSize/2: ", validInputSize / 2)
+#	print("eventPos: ", event.position)
+#	if (validInputPos[0] - validInputSize/2 <= event.position[0] && event.position[0] <= validInputPos[0] + validInputSize/2 &&
+#	validInputPos[1] - validInputSize/2 <= event.position[1] && event.position[1] <= validInputPos[1] + validInputSize/2):
+
 	if event is InputEventScreenTouch and (joystick_mode == Joystick_mode.DYNAMIC or joystick_mode == Joystick_mode.FOLLOWING):
 		if event.is_pressed():
 			var new_pos = event.position - _background.rect_size / 2
@@ -51,6 +60,9 @@ func _gui_input(event: InputEvent) -> void:
 			_background.rect_position = _original_position
 
 func _on_Background_gui_input(event: InputEvent) -> void:
+#	print("validPos: ", validInputPos[0], validInputPos[1])
+#	print("validSize/2: ", validInputSize / 2)
+#	print("eventPos: ", event.position)
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			_handle.modulate = _pressed_color
@@ -61,6 +73,7 @@ func _on_Background_gui_input(event: InputEvent) -> void:
 			_handle.modulate = _original_color
 	
 	if event is InputEventScreenDrag:
+		# 여기서 Handle의 Position 가져오고 Size 가져와서 인식해야 할 터치 범위 구하기 
 		var vector : Vector2 = event.position - _background.rect_size / 2
 		var dead_size = dead_zone * _background.rect_size.x / 2
 		if vector.length() < dead_size:
