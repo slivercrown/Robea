@@ -233,12 +233,13 @@ script = ExtResource( 3 )
 [node name="JoystickMoving" type="CanvasLayer" parent="."]
 
 [node name="Joystick" parent="JoystickMoving" instance=ExtResource( 5 )]
+joystick_mode = 1
 
 [node name="Background" parent="JoystickMoving/Joystick" index="0"]
-margin_left = 17.5708
-margin_top = 94.9048
-margin_right = 105.571
-margin_bottom = 171.905
+margin_left = 36.0251
+margin_top = 89.365
+margin_right = 104.025
+margin_bottom = 143.365
 
 [node name="JoystickAim" type="CanvasLayer" parent="."]
 
@@ -247,12 +248,13 @@ margin_left = 368.321
 margin_top = -10.833
 margin_right = -111.679
 margin_bottom = -110.833
+joystick_mode = 1
 
 [node name="Background" parent="JoystickAim/Joystick" index="0"]
-margin_left = 9.83298
-margin_top = 104.19
-margin_right = 97.833
-margin_bottom = 181.19
+margin_left = 13.61
+margin_top = 103.925
+margin_right = 76.61
+margin_bottom = 153.925
 [connection signal="tween_completed" from="ScreenShake/Tween" to="ScreenShake" method="_on_Tween_tween_completed"]
 
 [editable path="JoystickMoving/Joystick"]

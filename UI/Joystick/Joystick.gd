@@ -7,6 +7,7 @@ var is_working := false
 
 # The joystick output.
 var output := Vector2.ZERO
+var isShoot
 
 # FIXED: The joystick doesn't move.
 # DYNAMIC: Every time the joystick area is pressed, the joystick position is set on the touched position.
@@ -88,7 +89,7 @@ func _update_output(vector: Vector2) -> void:
 
 func _following(vector: Vector2) -> void:
 	var clamp_size = clamp_zone * _background.rect_size.x / 2
-	if vector.length() > clamp_size:
+	if vector.length() >= clamp_size:
 		var radius = vector.normalized() * clamp_size
 		var delta = vector - radius
 		var new_pos = _background.rect_position + delta
