@@ -214,4 +214,4 @@ tile_set = SubResource( 9 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 983054, 10, 0, 983055, 10, 0 )
+tile_data = PoolIntArray( 983053, 10, 0, 983054, 10, 0, 983055, 10, 0, 983056, 10, 0 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Monster/base/EnemyType2/EnemyType2.gd" type="Script" id=1]
-[ext_resource path="res://Items/Passive/glue.png" type="Texture" id=2]
+[ext_resource path="res://M484BulletCollection1.png" type="Texture" id=2]
 [ext_resource path="res://Monster/base/EGridSnapper.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Rect2( 123, 269, 11, 11 ), Rect2( 139, 269, 11, 11 ) ]
+"values": [ Rect2( 202, 269, 11, 11 ), Rect2( 186, 269, 11, 11 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -39,7 +39,8 @@ anims/default = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-region_rect = Rect2( 139, 269, 11, 11 )
+region_enabled = true
+region_rect = Rect2( 202, 269, 11, 11 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -67,3 +68,6 @@ __meta__ = {
 
 [node name="EGridSnapper" type="Position2D" parent="."]
 script = ExtResource( 3 )
+
+[node name="GlueTimer" type="Timer" parent="."]
+[connection signal="timeout" from="GlueTimer" to="." method="_on_GlueTimer_timeout"]

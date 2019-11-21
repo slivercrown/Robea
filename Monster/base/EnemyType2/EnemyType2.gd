@@ -13,6 +13,11 @@ var movedir = Vector2()
 var knockdir = Vector2()
 var spritedir = "down"
 
+var GLUE_VAR = 1
+
+var hitmask = 1
+var hitTimer = 0
+
 var limit_l = 0
 var limit_r = 0
 var limit_u = 0
@@ -41,7 +46,7 @@ func _physics_process(delta):
 
 func movement_loop(delta):
 	var motion
-	var collision = move_and_collide(velocity * delta)
+	var collision = move_and_collide(velocity * delta * GLUE_VAR)
 			
 	if collision:
 		velocity = velocity.bounce(collision.normal)
@@ -69,6 +74,13 @@ func anim_switch(animation):
 func damage_loop():
 	if hitstun > 0:
 		hitstun -= 1
+	if hitTimer > 0:
+		hitTimer -= 0.2
+		hitmask -= 0.01
+		$Sprite.modulate = Color(hitmask, 0, 0)
+	else:
+		hitmask = 1
+		$Sprite.modulate = Color(1, 1, 1)
 	for body in $Hitbox.get_overlapping_bodies():
 		if hitstun == 0 and body.get("DAMAGE") != null and body.get("TYPE") == "PLAYER":
 			health -= body.get("DAMAGE")
@@ -77,11 +89,18 @@ func damage_loop():
 	
 	for body in $Hitbox.get_overlapping_bodies():
 		if hitstun == 0 and body.get("DAMAGE") != null and body.get("TYPE") == "BULLET":
+			if body.glue:
+				GLUE_VAR = 0.5
+				$GlueTimer.start()
+			hitTimer = 1
 			health -= body.get("DAMAGE")
 			hitstun = 5
 			body.queue_free()
 
 
 
-	
-	
+
+
+func _on_GlueTimer_timeout():
+	$GlueTimer.stop()
+	GLUE_VAR = 1

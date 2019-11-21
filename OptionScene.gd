@@ -16,6 +16,12 @@ func _on_Plus_pressed():
 func _on_Minus_pressed():
 	$TextureProgress.volume_down()
 	
+func _on_Plus2_pressed():
+	$TextureProgress2.volume_up()
+
+func _on_Minus2_pressed():
+	$TextureProgress2.volume_down()
+	
 func _pressed():
 	var node = get_tree().get_node().Music
 	if(name=="Plus"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://OptionScene.gd" type="Script" id=1]
 [ext_resource path="res://UI/K-093.jpg" type="Texture" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://healthBar_background.png" type="Texture" id=7]
 [ext_resource path="res://healthBar_health.png" type="Texture" id=8]
 [ext_resource path="res://SceneFolder/volumebar.gd" type="Script" id=9]
+[ext_resource path="res://UI/K-096.jpg" type="Texture" id=10]
+[ext_resource path="res://UI/K-097.jpg" type="Texture" id=11]
+[ext_resource path="res://SceneFolder/TextureProgress3.gd" type="Script" id=12]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -30,6 +33,7 @@ text = "OptionsScene"
 align = 1
 
 [node name="Button" type="Button" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -48,6 +52,7 @@ scale = Vector2( 1.23224, 2.19061 )
 texture = ExtResource( 2 )
 
 [node name="Button2" type="Button" parent="."]
+editor/display_folded = true
 margin_left = 424.0
 margin_top = 6.0
 margin_right = 916.0
@@ -61,16 +66,17 @@ scale = Vector2( 2.78996, 2.57199 )
 texture = ExtResource( 3 )
 
 [node name="BackGround" type="Sprite" parent="."]
-position = Vector2( 240.049, 134.822 )
+position = Vector2( 239.725, 134.822 )
 scale = Vector2( 3.20721, 1.81265 )
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="Plus" type="Button" parent="."]
-margin_left = 336.0
-margin_top = 124.0
-margin_right = 359.0
-margin_bottom = 144.0
+editor/display_folded = true
+margin_left = 341.0
+margin_top = 126.0
+margin_right = 364.0
+margin_bottom = 146.0
 
 [node name="Sprite" type="Sprite" parent="Plus"]
 position = Vector2( 11.4507, 9.86267 )
@@ -78,10 +84,11 @@ scale = Vector2( 0.139133, 0.108654 )
 texture = ExtResource( 5 )
 
 [node name="Minus" type="Button" parent="."]
-margin_left = 119.0
-margin_top = 125.0
-margin_right = 133.0
-margin_bottom = 147.0
+editor/display_folded = true
+margin_left = 150.513
+margin_top = 123.74
+margin_right = 164.513
+margin_bottom = 145.74
 
 [node name="Sprite" type="Sprite" parent="Minus"]
 position = Vector2( 6.45532, 11.6146 )
@@ -89,17 +96,63 @@ scale = Vector2( 0.0628865, 0.0614837 )
 texture = ExtResource( 6 )
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
-margin_left = 165.81
-margin_top = 116.555
-margin_right = 315.81
-margin_bottom = 156.555
+margin_left = 177.785
+margin_top = 118.446
+margin_right = 327.785
+margin_bottom = 158.446
 min_value = -80.0
 max_value = 24.0
 step = 8.0
 texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 9 )
+
+[node name="MenuBgm_text" type="Sprite" parent="."]
+position = Vector2( 73, 136 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
+[node name="GameBgm_text" type="Sprite" parent="."]
+position = Vector2( 73, 199.37 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Plus2" type="Button" parent="."]
+margin_left = 343.844
+margin_top = 187.963
+margin_right = 366.844
+margin_bottom = 207.963
+
+[node name="Sprite" type="Sprite" parent="Plus2"]
+position = Vector2( 10.96, 9.16357 )
+scale = Vector2( 0.132269, 0.12951 )
+texture = ExtResource( 5 )
+
+[node name="Minus2" type="Button" parent="."]
+margin_left = 151.45
+margin_top = 186.3
+margin_right = 166.45
+margin_bottom = 207.3
+
+[node name="Sprite" type="Sprite" parent="Minus2"]
+position = Vector2( 8.08081, 9.79834 )
+scale = Vector2( 0.0665987, 0.0677328 )
+texture = ExtResource( 6 )
+
+[node name="TextureProgress2" type="TextureProgress" parent="."]
+margin_left = 180.286
+margin_top = 179.16
+margin_right = 330.286
+margin_bottom = 219.16
+min_value = -80.0
+max_value = 24.0
+step = 8.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+script = ExtResource( 12 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Plus" to="." method="_on_Plus_pressed"]
 [connection signal="pressed" from="Minus" to="." method="_on_Minus_pressed"]
+[connection signal="pressed" from="Plus2" to="." method="_on_Plus2_pressed"]
+[connection signal="pressed" from="Minus2" to="." method="_on_Minus2_pressed"]

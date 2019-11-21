@@ -5,10 +5,8 @@ const Monster = preload("res://Monster/base/EnemyType1/EnemyType1.tscn")
 var EnemyCount = 0
 var ItemBox = 1
 
-
 func _on_EnemyType1_plus_count():
 	EnemyCount += 1
-	#print(EnemyCount)
 
 
 func _on_EnemyType1_minus_count():
@@ -19,7 +17,7 @@ func _on_EnemyType1_minus_count():
 			var b = Monster.instance()
 			get_parent().add_child(b)
 			var pos = Vector2(270,135)
-			b.start_at(pos) # 생성
+			b.start_at(pos) # 생
 
 
 func _on_EnemyType2_minus_count():
@@ -35,7 +33,6 @@ func _on_EnemyType2_minus_count():
 
 func _on_EnemyType2_plus_count():
 	EnemyCount += 1
-	#print(EnemyCount)
 
 func _on_EnemyType3_minus_count():
 	EnemyCount -= 1
@@ -50,4 +47,3 @@ func _on_EnemyType3_minus_count():
 
 func _on_EnemyType3_plus_count():
 	EnemyCount += 1
-	#print(EnemyCount)

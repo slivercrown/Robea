@@ -63,6 +63,8 @@ wait_time = 0.5
 [node name="DirTimer" type="Timer" parent="."]
 wait_time = 0.8
 
+[node name="GlueTimer" type="Timer" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
@@ -84,4 +86,5 @@ __meta__ = {
 script = ExtResource( 3 )
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
 [connection signal="timeout" from="DirTimer" to="." method="_on_DirTimer_timeout"]
+[connection signal="timeout" from="GlueTimer" to="." method="_on_GlueTimer_timeout"]
 [connection signal="body_exited" from="ChaseArea" to="." method="_on_ChaseArea_body_exited"]

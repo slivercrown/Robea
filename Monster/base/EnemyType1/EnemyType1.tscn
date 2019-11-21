@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Monster/base/EnemyType1/EnemyType1.gd" type="Script" id=1]
-[ext_resource path="res://Items/Passive/eraser.png" type="Texture" id=2]
-[ext_resource path="res://Monster/base/EGridSnapper.gd" type="Script" id=3]
+[ext_resource path="res://Monster/base/EGridSnapper.gd" type="Script" id=2]
+[ext_resource path="res://M484BulletCollection1.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "default"
@@ -17,11 +17,11 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Rect2( 123, 269, 11, 11 ), Rect2( 139, 269, 11, 11 ) ]
+"values": [ Rect2( 170, 269, 11, 11 ), Rect2( 154, 269, 11, 11 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 5, 5 )
+extents = Vector2( 6, 6 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8, 8 )
@@ -37,20 +37,14 @@ script = ExtResource( 1 )
 playback_speed = 4.0
 anims/default = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-region_rect = Rect2( 139, 269, 11, 11 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="DirTimer" type="Timer" parent="."]
+
+[node name="GlueTimer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
 [node name="Hitbox" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource( 3 )
@@ -67,5 +61,14 @@ __meta__ = {
 }
 
 [node name="EGridSnapper" type="Position2D" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 154, 269, 11, 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 [connection signal="timeout" from="DirTimer" to="." method="_on_DirTimer_timeout"]
+[connection signal="timeout" from="GlueTimer" to="." method="_on_GlueTimer_timeout"]

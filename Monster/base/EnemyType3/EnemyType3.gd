@@ -16,6 +16,11 @@ var movedir = Vector2(0,0)
 var knockdir = Vector2(0,0)
 var spritedir = "down"
 
+var GLUE_VAR = 1
+
+var hitmask = 1
+var hitTimer = 0
+
 var limit_l = 0
 var limit_r = 0
 var limit_u = 0
@@ -68,10 +73,10 @@ func movement_loop():
 				SPEED = 0
 			else:
 				SPEED = 20
-			motion = movedir.normalized() * SPEED
+			motion = movedir.normalized() * SPEED * GLUE_VAR
 		else:
 			SPEED = 40
-			motion = movedir.normalized() * SPEED
+			motion = movedir.normalized() * SPEED * GLUE_VAR
 	else:
 		motion = knockdir.normalized() * SPEED * 3
 
@@ -96,6 +101,14 @@ func anim_switch(animation):
 func damage_loop():
 	if hitstun > 0:
 		hitstun -= 1
+	if hitTimer > 0:
+		hitTimer -= 0.2
+		hitmask -= 0.01
+		$Sprite.modulate = Color(hitmask, 0, 0)
+	else:
+		hitmask = 1
+		$Sprite.modulate = Color(1, 1, 1)
+		
 	for body in $Hitbox.get_overlapping_bodies():
 		if hitstun == 0 and body.get("DAMAGE") != null and body.get("TYPE") == "PLAYER":
 			hitstun = 10
@@ -103,6 +116,10 @@ func damage_loop():
 	
 	for body in $Hitbox.get_overlapping_bodies():
 		if hitstun == 0 and body.get("DAMAGE") != null and body.get("TYPE") == "BULLET":
+			if body.glue:
+				GLUE_VAR = 0.5
+				$GlueTimer.start()
+			hitTimer = 1
 			health -= body.get("DAMAGE")
 			hitstun = 5
 			SPEED = 0
@@ -130,3 +147,8 @@ func _on_DirTimer_timeout():
 	movedir = Vector2(rand_range(-1, 1), rand_range(-1, 1))
 	if !target:
 		$ESprite_Gun.global_rotation = movedir.angle()
+
+
+func _on_GlueTimer_timeout():
+	$GlueTimer.stop()
+	GLUE_VAR = 1

@@ -51,7 +51,7 @@ func damage_loop():
 	for body in $Hitbox.get_overlapping_bodies():
 		if hitstun == 0 and body.get("DAMAGE") != null and body.get("TYPE") == "PLAYER":
 			health -= body.get("DAMAGE")
-			#print(health)
+			print(health)
 			hitstun = 10
 			knockdir = Vector2(global_position.x - body.global_position.x, global_position.y - body.global_position.y)
 		
