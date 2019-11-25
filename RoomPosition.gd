@@ -19,7 +19,6 @@ var map_array = [ [0, 0, 0, 0],
 func _ready():
 	init()
 	map_array[1][1] = 4
-	print(map_array)
 	for y in range(4):
 		var row = map_array[y]
 		for x in range(4):

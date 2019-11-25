@@ -9,8 +9,6 @@ const path = "res://Init/userinfo.txt"
 
 #저장된 사용자 정보가 있는지 확인, 있으면 그 값으로 입력창을 채움
 func _ready():
-	
-	
 	var f = File.new()
 	#로그인 이력이 있다면
 	if f.file_exists(path):
@@ -84,13 +82,3 @@ func save_userdata(data):
 	#var err = f.open(path, File.WRITE)
 	f.store_var(data)
 	f.close()
-
-
-#func checkAccount():
-#	#TODO: 계정 존재하는지 서버에 확인,
-#	if(id == 'terra' and pw == 'terra'):
-#		var data = id + '\n' + pw
-#	else:
-#		#TODO: alert 창 띄우기 
-#		print('login info is not matched')
-#		pass

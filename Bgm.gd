@@ -12,3 +12,15 @@ func _ready():
 
 func _music_stop():
 	$MenuBgm.stop()
+	
+func _gamemusic_start():
+	$GameBgm.play()
+	
+func _gamemusic_quit():
+	$GameBgm.stop()
+	
+func _effectsound_start():
+	$Effect_Sound.play()
+	
+func _effectsound_quit():
+	$Effect_Sound.stop()

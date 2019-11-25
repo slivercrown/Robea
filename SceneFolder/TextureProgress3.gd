@@ -12,14 +12,11 @@ func volume_up():
 	
 	value +=8
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("GameBgm"), value)
-	#print(AudioServer.get_bus_index("MenuBgm"))
-	
-	#vol = AudioServer.set_bus_volume_db(AudioServer.get_bus_index("MenuBgm"), value)
+	Bgm._gamemusic_start()
 	
 func volume_down():
 	
 	value -=8
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("GameBgm"), value)
-	#print(AudioServer.get_bus_index("MenuBgm"))
-
-	#vol = AudioServer.set_bus_volume_db(AudioServer.get_bus_index("MenuBgm"), value)
+	Bgm._gamemusic_start()
+	

@@ -1,8 +1,8 @@
-
 extends KinematicBody2D
 
 const BULLET_SCENE = preload("res://Items/Bullets/Bullet.tscn")
 const DUST_SCENE = preload("res://Player/Sprites/Dust/Dust.tscn")
+
 #actitem scenes
 const ITEM_TACK_SCENE = preload("res://Items/Active/Tack/Tack_Item.tscn")
 const ITEM_GUM_SCENE = preload("res://Items/Active/Gum/Gum_Item.tscn")
@@ -84,9 +84,10 @@ func _physics_process(delta):
 			apply_knockback(knockdir.normalized() * ACCELERATION * delta *0.15 )
 	motion = move_and_slide(motion)
 
-	if pow(get_node("../JoystickAim/Joystick").output[0], 2) + pow(get_node("../JoystickAim/Joystick").output[1], 2) >= 0.7:
+	var output = get_node("../JoystickAim/JoystickAimButton").get_value()
+	if pow(output[0], 2) + pow(output[1], 2) >= 0.7:
 		shoot()
-		$EffectBgm.play()
+		
 	else: 
 		if state == STATE.ATTACK:
 			$Sprite_Player.set_frame($Sprite_Player.frame-1)
@@ -94,7 +95,7 @@ func _physics_process(delta):
 	
 	
 func shoot():
-	$Sprite_Gun.look_at(Vector2(get_node("../JoystickAim/Joystick").output[0]*10000,get_node("../JoystickAim/Joystick").output[1]*10000)) # 무기 방향
+	$Sprite_Gun.look_at(Vector2(get_node("../JoystickAim/JoystickAimButton").get_value()[0]*10000,get_node("../JoystickAim/JoystickAimButton").get_value()[1]*10000)) # 무기 방향
 	
 	if can_shoot :
 		can_shoot = false
@@ -106,6 +107,8 @@ func shoot():
 			$Sprite_Player.set_flip_h(false)
 			sprite_flip = false
 		$GunTimer.start() # 무기 연사(장전) 시간 
+		# $EffectBgm.play()
+		Bgm._effectsound_start()
 		var b = BULLET_SCENE.instance()
 		get_parent().add_child(b)
 		b.parent = get_instance_id() 
@@ -117,10 +120,20 @@ func shoot():
 			b.start_at($Sprite_Gun.get_global_rotation(),Vector2(global_position.x-20,global_position.y-4)) # 총알 생성 
 		else :
 			b.start_at($Sprite_Gun.get_global_rotation(),Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
-
+		"""var aim = get_node("../JoystickAim/Joystick").output
+		var aimFloat = aim.angle()
+		if aim[0] < 0:
+			$Sprite_Player.set_flip_h(true)
+			sprite_flip = true
+			b.start_at(aimFloat,Vector2(global_position.x-20,global_position.y-4)) # 총알 생성 
+		elif aim[0] > 0:
+			$Sprite_Player.set_flip_h(false)
+			sprite_flip = false
+			b.start_at(aimFloat,Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
+"""
 func get_input_axis():
 	var axis = Vector2.ZERO
-	axis = get_node("../JoystickMoving/Joystick").output
+	axis = get_node("../JoystickMoving/JoystickMovingButton").get_value()
 	#axis.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")) # right - left로 좌우 방향 결정
 	#axis.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")) # down - up으로 상하 방향 결정 
 	if(axis[0] < 0): 
@@ -146,7 +159,7 @@ func apply_knockback(accel):
 
 func _on_GunTimer_timeout(): #GunTimer에서 지정한 시간이 다 되면
 	can_shoot = true
-	
+
 func takeDamage(dmg): 
 	health -= dmg
 	if(health <= 0):
@@ -219,10 +232,10 @@ func animation_loop():
 					
 func check_animation_loop():
 	if $Sprite_Player.animation == "Attack" && $Sprite_Player.frame == $Sprite_Player.frames.get_frame_count("Attack")-1:
-			if pow(get_node("../JoystickAim/Joystick").output[0], 2) + pow(get_node("../JoystickAim/Joystick").output[1], 2) < 0.7:
+			if pow(get_node("../JoystickAim/JoystickAimButton").get_value()[0], 2) + pow(get_node("../JoystickAim/JoystickAimButton").get_value()[1], 2) < 0.7:
 				state = STATE.RETURN
 	if $Sprite_Player.animation == "Return" && $Sprite_Player.frame == $Sprite_Player.frames.get_frame_count("Return")-1:
-			if pow(get_node("../JoystickAim/Joystick").output[0], 2) + pow(get_node("../JoystickAim/Joystick").output[1], 2) < 0.7:
+			if pow(get_node("../JoystickAim/JoystickAimButton").get_value()[0], 2) + pow(get_node("../JoystickAim/JoystickAimButton").get_value()[1], 2) < 0.7:
 				state = STATE.IDLE
 	if $Sprite_Player.animation == "Walk" && $Sprite_Player.frame == 2 && dust1:
 			dust1 = false

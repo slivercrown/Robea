@@ -32,8 +32,8 @@ texture_progress = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="background_sprite" type="Sprite" parent="."]
-position = Vector2( 238.92, 135.605 )
-scale = Vector2( 3.195, 1.793 )
+position = Vector2( 239.694, 133.284 )
+scale = Vector2( 3.20532, 1.82395 )
 z_index = -4
 texture = ExtResource( 6 )
 

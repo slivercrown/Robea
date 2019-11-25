@@ -8,3 +8,9 @@ func _on_Button_pressed():
 
 func _on_Button2_pressed():
 	Global.goto_scene("res://SceneFolder/MainScene.tscn")
+	
+func _on_Button3_pressed():
+	get_node("Explain_sprite").visible = true
+
+func _on_Button4_pressed():
+	pass

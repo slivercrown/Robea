@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Bgm.gd" type="Script" id=1]
 [ext_resource path="res://UI/awesomeness.wav" type="AudioStream" id=2]
+[ext_resource path="res://UI/Opening Menu.wav" type="AudioStream" id=3]
+[ext_resource path="res://UI/swish_2.wav" type="AudioStream" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -13,3 +15,11 @@ stream = ExtResource( 2 )
 volume_db = 24.0
 autoplay = true
 bus = "MenuBgm"
+
+[node name="GameBgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "GameBgm"
+
+[node name="Effect_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "Effect"
