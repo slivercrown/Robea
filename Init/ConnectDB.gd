@@ -87,15 +87,18 @@ func createAccountPOST(data):
 		# << ㅇㅇ 만들어짐
 		if result["StatusCode"] == String(HTTPClient.RESPONSE_OK):
 			HTTP.close()
+			HTTP = null
 			return HTTPClient.RESPONSE_OK
 		
 		# << ㄴㄴ 중복이다 
 		else:
 			HTTP.close()
+			HTTP = null
 			return HTTPClient.RESPONSE_CONFLICT
 			
 	else:
-		HTTP.close()
+		HTTP.close() 
+		HTTP = null
 		return HTTPClient.RESPONSE_NO_CONTENT
 		
 		

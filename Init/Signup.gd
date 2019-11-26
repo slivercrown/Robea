@@ -71,7 +71,6 @@ func _on_signup_pressed():
 	
 	match retval:
 		HTTPClient.RESPONSE_OK:
-			data = {"id":id, "pw":pw, "nickname":nickname}
 			save_userdata(data)
 			get_node("result_label").text = "Account creation success !!"
 			get_node("result_label").visible = true
@@ -99,7 +98,7 @@ func _clear_msg():
 	
 func save_userdata(data):
 	var f = File.new()
-	f.open_encrypted_with_pass(path, File.WRITE, "0")
+	f.open(path, File.WRITE, "0")
 	var err = f.open_encrypted_with_pass(path, File.WRITE, "0")
 	f.store_var(data)
 	f.close()
