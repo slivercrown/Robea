@@ -53,6 +53,7 @@ var hitmask = 1
 var hitTimer = 0
 
 var return_frame #return frame
+var nickname
 
 func _physics_process(delta):
 	if SLOW :

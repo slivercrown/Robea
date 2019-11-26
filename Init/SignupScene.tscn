@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Init/Login.gd" type="Script" id=1]
+[ext_resource path="res://Init/Signup.gd" type="Script" id=1]
 [ext_resource path="res://UI/K-083.jpg" type="Texture" id=2]
 [ext_resource path="res://UI/K-081.jpg" type="Texture" id=3]
-[ext_resource path="res://UI/K-029.jpg" type="Texture" id=4]
-[ext_resource path="res://UI/K-082.jpg" type="Texture" id=5]
-[ext_resource path="res://Init/ConnectDB.gd" type="Script" id=6]
+[ext_resource path="res://UI/K-110.jpg" type="Texture" id=4]
+[ext_resource path="res://Init/ConnectDB.gd" type="Script" id=5]
 
 [node name="Login" type="Control"]
 margin_right = 478.656
@@ -15,34 +14,32 @@ script = ExtResource( 1 )
 
 [node name="user_id_label" type="Label" parent="."]
 margin_left = 75.0
-margin_top = 130.0
+margin_top = 51.0
 margin_right = 122.0
-margin_bottom = 144.0
+margin_bottom = 65.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Your ID"
 align = 2
 
 [node name="user_pw_label" type="Label" parent="."]
 margin_left = 70.0
-margin_top = 165.0
+margin_top = 86.0
 margin_right = 123.0
-margin_bottom = 179.0
+margin_bottom = 100.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Your PW"
 align = 2
 
 [node name="user_nickname_label" type="Label" parent="."]
-visible = false
 margin_left = 60.0
-margin_top = 197.945
+margin_top = 120.945
 margin_right = 124.281
-margin_bottom = 211.945
+margin_bottom = 134.945
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Your Nick"
 align = 2
 
 [node name="result_label" type="Label" parent="."]
-visible = false
 margin_left = 100.4
 margin_top = 200.7
 margin_right = 362.4
@@ -53,30 +50,29 @@ valign = 1
 
 [node name="user_id" type="LineEdit" parent="."]
 margin_left = 145.0
-margin_top = 125.0
+margin_top = 46.0
 margin_right = 310.0
-margin_bottom = 149.0
+margin_bottom = 70.0
 
 [node name="user_pw" type="LineEdit" parent="."]
 margin_left = 145.0
-margin_top = 160.0
+margin_top = 81.0
 margin_right = 310.0
-margin_bottom = 184.0
+margin_bottom = 105.0
 secret = true
 
 [node name="user_nickname" type="LineEdit" parent="."]
-visible = false
 margin_left = 145.0
-margin_top = 192.0
+margin_top = 115.0
 margin_right = 310.0
-margin_bottom = 216.0
+margin_bottom = 139.0
 secret = true
 
 [node name="login" type="Button" parent="."]
 margin_left = 325.0
-margin_top = 125.0
+margin_top = 51.0
 margin_right = 358.0
-margin_bottom = 147.0
+margin_bottom = 73.0
 
 [node name="login_sprite" type="Sprite" parent="login"]
 position = Vector2( 16.6123, 10.5984 )
@@ -95,17 +91,12 @@ scale = Vector2( 0.191, 0.246777 )
 texture = ExtResource( 3 )
 
 [node name="background_sprite" type="Sprite" parent="."]
-position = Vector2( 239.616, 133.886 )
-scale = Vector2( 3.23259, 1.81129 )
-z_index = -2
+position = Vector2( 239.616, 135.473 )
+scale = Vector2( 0.716665, 0.691827 )
+z_index = -4
 texture = ExtResource( 4 )
 
-[node name="Subject_sprite" type="Sprite" parent="."]
-position = Vector2( 112, 48 )
-scale = Vector2( 0.332786, 0.311057 )
-texture = ExtResource( 5 )
-
 [node name="ConnectDB" type="HTTPRequest" parent="."]
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 [connection signal="pressed" from="login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="login/signup" to="." method="_on_signup_pressed"]
