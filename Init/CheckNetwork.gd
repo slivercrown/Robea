@@ -10,7 +10,7 @@ func _ready():
 	check_timer = Timer.new()
 	check_timer.autostart = true
 	check_timer.one_shot = false
-	check_timer.wait_time = 3
+	check_timer.wait_time = 2
 	check_timer.connect("timeout", self, "_check_connection")
 	add_child(check_timer)
 	connect("request_completed", self, "on_request_result")
@@ -30,7 +30,6 @@ func on_request_result(result, response_code, headers, body):
 	match result:
 		RESULT_SUCCESS:
 			emit_signal("connection_success")
-			print('connection success')
 			
 		RESULT_CHUNKED_BODY_SIZE_MISMATCH:
 			emit_signal("error_connection_failed", RESULT_CHUNKED_BODY_SIZE_MISMATCH, "RESULT_CHUNKED_BODY_SIZE_MISMATCH")

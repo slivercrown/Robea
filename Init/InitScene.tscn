@@ -67,5 +67,15 @@ texture = ExtResource( 6 )
 position = Vector2( 112, 48 )
 scale = Vector2( 0.333, 0.311 )
 texture = ExtResource( 10 )
+
+[node name="Error" type="Label" parent="."]
+margin_left = 160.441
+margin_top = 224.962
+margin_right = 322.441
+margin_bottom = 238.962
+custom_colors/font_color = Color( 0.0862745, 0.478431, 0.737255, 1 )
+custom_colors/font_color_shadow = Color( 0.560784, 0.560784, 0.560784, 1 )
+custom_constants/shadow_offset_x = 0
+align = 2
 [connection signal="connection_success" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_connection_success"]
 [connection signal="error_connection_failed" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_error_connection_failed"]

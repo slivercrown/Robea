@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Autoload"
-run/main_scene="res://Init/InitScene.tscn"
+run/main_scene="res://Init/LoginScene.tscn"
 config/icon="res://Init/Gadget/icon.png"
 
 [autoload]
