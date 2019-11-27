@@ -98,7 +98,7 @@ func _clear_msg():
 	
 func save_userdata(data):
 	var f = File.new()
-	f.open(path, File.WRITE, "0")
+	f.open(path, File.WRITE)
 	var err = f.open_encrypted_with_pass(path, File.WRITE, "0")
 	f.store_var(data)
 	f.close()
