@@ -49,10 +49,10 @@ scale = Vector2( 1.20407, 1.03487 )
 texture = ExtResource( 2 )
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 306.852
-margin_top = 210.653
-margin_right = 771.852
-margin_bottom = 364.653
+margin_left = 308.303
+margin_top = 208.625
+margin_right = 773.302
+margin_bottom = 362.626
 rect_scale = Vector2( 0.1, 0.1 )
 custom_colors/font_color_disabled = Color( 0.447059, 0.211765, 0.211765, 1 )
 icon = SubResource( 2 )

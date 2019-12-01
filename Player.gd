@@ -66,6 +66,7 @@ func _physics_process(delta):
 	animation_loop()
 	item_loop()
 	
+	# 이동
 	var axis = get_input_axis() 
 	if(axis == Vector2.ZERO):  # 이동 방향 입력안하면 마찰 적용 
 		if state == STATE.WALK:
@@ -85,8 +86,9 @@ func _physics_process(delta):
 			apply_knockback(knockdir.normalized() * ACCELERATION * delta *0.15 )
 	motion = move_and_slide(motion)
 
+	# 공격
 	var output = get_node("../JoystickAim/JoystickAimButton").get_value()
-	if pow(output[0], 2) + pow(output[1], 2) >= 0.7:
+	if sqrt(pow(output[0], 2) + pow(output[1], 2)) >= 0.8:
 		shoot()
 		
 	else: 
@@ -132,6 +134,7 @@ func shoot():
 			sprite_flip = false
 			b.start_at(aimFloat,Vector2(global_position.x+20,global_position.y-4)) # 총알 생성 
 """
+
 func get_input_axis():
 	var axis = Vector2.ZERO
 	axis = get_node("../JoystickMoving/JoystickMovingButton").get_value()

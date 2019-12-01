@@ -1,14 +1,12 @@
 extends TouchScreenButton
 # Special thanks to 'Gonkee's joystick script'
 
-var radius = Vector2(32, 32)
+var radius = Vector2(64, 64)	
 var boundary = 64
-
 var ongoing_drag = -1
-
 var return_accel = 20
-
 var threshold = 10
+const maxThreshold = 70
  
 func _process(delta):
 	if ongoing_drag == -1:
@@ -32,8 +30,9 @@ func _input(event):
 
 	if event is InputEventScreenTouch and !event.is_pressed() and event.get_index() == ongoing_drag:
 		ongoing_drag = -1
+		
 
 func get_value():
-	if get_button_pos().length() > threshold:
+	if get_button_pos().length() > threshold and get_button_pos().length() < maxThreshold:
 		return get_button_pos().normalized()
 	return Vector2(0, 0)

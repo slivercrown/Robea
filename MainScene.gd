@@ -1,8 +1,5 @@
 extends Control
 
-
-
-
 func _ready():
 	Bgm.count +=1
 	if(Bgm.count==1):
