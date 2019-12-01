@@ -87,7 +87,7 @@ func _physics_process(delta):
 	motion = move_and_slide(motion)
 
 	# 공격
-	var output = get_node("../JoystickAim/JoystickAimButton").get_value()
+	var output = get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()
 	if sqrt(pow(output[0], 2) + pow(output[1], 2)) >= 0.8:
 		shoot()
 		
@@ -98,7 +98,7 @@ func _physics_process(delta):
 	
 	
 func shoot():
-	$Sprite_Gun.look_at(Vector2(get_node("../JoystickAim/JoystickAimButton").get_value()[0]*10000,get_node("../JoystickAim/JoystickAimButton").get_value()[1]*10000)) # 무기 방향
+	$Sprite_Gun.look_at(Vector2(get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()[0]*10000,get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()[1]*10000)) # 무기 방향
 	
 	if can_shoot :
 		can_shoot = false
@@ -137,7 +137,7 @@ func shoot():
 
 func get_input_axis():
 	var axis = Vector2.ZERO
-	axis = get_node("../JoystickMoving/JoystickMovingButton").get_value()
+	axis = get_node("../Joystick/JoystickMoving/JoystickMovingButton").get_value()
 	#axis.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")) # right - left로 좌우 방향 결정
 	#axis.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")) # down - up으로 상하 방향 결정 
 	if(axis[0] < 0): 
@@ -236,10 +236,10 @@ func animation_loop():
 					
 func check_animation_loop():
 	if $Sprite_Player.animation == "Attack" && $Sprite_Player.frame == $Sprite_Player.frames.get_frame_count("Attack")-1:
-			if pow(get_node("../JoystickAim/JoystickAimButton").get_value()[0], 2) + pow(get_node("../JoystickAim/JoystickAimButton").get_value()[1], 2) < 0.7:
+			if sqrt(pow(get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()[0], 2) + pow(get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()[1], 2)) < 0.7:
 				state = STATE.RETURN
 	if $Sprite_Player.animation == "Return" && $Sprite_Player.frame == $Sprite_Player.frames.get_frame_count("Return")-1:
-			if pow(get_node("../JoystickAim/JoystickAimButton").get_value()[0], 2) + pow(get_node("../JoystickAim/JoystickAimButton").get_value()[1], 2) < 0.7:
+			if sqrt(pow(get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()[0], 2) + pow(get_node("../Joystick/JoystickAim/JoystickAimButton").get_value()[1], 2)) < 0.7:
 				state = STATE.IDLE
 	if $Sprite_Player.animation == "Walk" && $Sprite_Player.frame == 2 && dust1:
 			dust1 = false

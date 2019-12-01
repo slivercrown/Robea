@@ -11,10 +11,8 @@ func _ready():
 	update_grid_position()
 	
 
-
 func _physics_process(delta):
 	update_grid_position()
-	#print(grid_position)
 
 
 func update_grid_position():
@@ -34,4 +32,3 @@ func calculate_grid_position(): # 플레이어가 어느 구역에 있는지 계
 
 func jump_to_grid_position(): # 카메라 포지션 이동 
 	position = grid_position * grid_size + (grid_size/2)
-	

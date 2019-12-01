@@ -59,10 +59,6 @@ func init():
 		y += lengthdir_y(1, dir)
 		x = clamp(x, 0, 3)
 		y = clamp(y, 0, 3)
-	"""print(map_array[0].count(1))
-	print(map_array[1].count(1))
-	print(map_array[2].count(1))
-	print(map_array[3].count(1))"""
 	
 	
 func lengthdir_x(length, direction):
