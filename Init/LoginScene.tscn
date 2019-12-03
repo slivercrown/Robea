@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Init/Login.gd" type="Script" id=1]
 [ext_resource path="res://UI/K-083.jpg" type="Texture" id=2]
 [ext_resource path="res://UI/K-081.jpg" type="Texture" id=3]
 [ext_resource path="res://UI/K-029.jpg" type="Texture" id=4]
 [ext_resource path="res://UI/K-082.jpg" type="Texture" id=5]
-[ext_resource path="res://Init/ConnectDB.gd" type="Script" id=6]
 
 [node name="Login" type="Control"]
 margin_right = 478.656
@@ -104,8 +103,5 @@ texture = ExtResource( 4 )
 position = Vector2( 112, 48 )
 scale = Vector2( 0.332786, 0.311057 )
 texture = ExtResource( 5 )
-
-[node name="ConnectDB" type="HTTPRequest" parent="."]
-script = ExtResource( 6 )
 [connection signal="pressed" from="login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="login/signup" to="." method="_on_signup_pressed"]
